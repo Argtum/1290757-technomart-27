@@ -19,23 +19,25 @@
         </div>
 
         <div class="main-header__container--bottom">
-          <p class="main-header__about">
+          <p class="main-header__text">
             Интернет-магазин спортивных товаров и инструментов для ремонта
           </p>
           <p class="main-header__contacts">
             <a class="button button--header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
-          <button class="main-header__button button button--login">Войти</button>
-          <button class="main-header__button button button--registration">Регистрация</button>
-          <ul class="main-header__site-navigation list">
-            <li class="list__item"><a href="">Главная</a></li>
-            <li class="list__item"><a href="">Компания</a></li>
-            <li class="list__item"><a href="">Каталог</a></li>
-            <li class="list__item"><a href="">Новости</a></li>
-            <li class="list__item"><a href="">Спецпредложения</a></li>
-            <li class="list__item"><a href="">Доставка</a></li>
-            <li class="list__item"><a href="">Контакты</a></li>
+          <div class="main-header__authentication">
+            <button class="main-header__button button button--login">Войти</button>
+            <button class="main-header__button button button--registration">Регистрация</button>
+          </div>
+          <ul class="main-header__site-navigation">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Компания</a></li>
+            <li><a href="">Каталог</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">Спецпредложения</a></li>
+            <li><a href="">Доставка</a></li>
+            <li><a href="">Контакты</a></li>
           </ul>
         </div>
       </nav>
@@ -53,10 +55,10 @@
           Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями:
         </p>
-        <ul class="about-company__partners list">
-          <li class="list__item"><a href="">Деловые линии</a></li>
-          <li class="list__item"><a href="">Автотрейдинг</a></li>
-          <li class="list__item"><a href="">ЖелДорЭкспедиция</a></li>
+        <ul class="about-company__list">
+          <li><a href="">Деловые линии</a></li>
+          <li><a href="">Автотрейдинг</a></li>
+          <li><a href="">ЖелДорЭкспедиция</a></li>
         </ul>
         <a class="about-company__button button button--main" href="">Подробнее о компании</a>
       </section>
@@ -67,7 +69,9 @@
           Вы можете забрать товар сами,<br>
           заехав в наш офис:
         </p>
-        <div class="contacts__map"></div>
+        <button class="contacts__map">
+          <img src="img/map.jpg" width="300" height="158" alt="Местоположене магазина на карте">
+        </button>
         <a class="contacts__button button button--main--full-size" href="">Подробнее о компании</a>
       </section>
     </main>
@@ -79,18 +83,18 @@
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55
         </p>
-        <ul class="main-footer__site-navigation main-footer__site-navigation--top list">
-          <li class="list__item"><a href="">Компания</a></li>
-          <li class="list__item"><a href="">Новости</a></li>
-          <li class="list__item"><a href="">Каталог</a></li>
-          <li class="list__item"><a href="">Доставка</a></li>
-          <li class="list__item"><a href="">Контакты</a></li>
+        <ul class="main-footer__site-navigation main-footer__site-navigation--top">
+          <li><a href="">Компания</a></li>
+          <li><a href="">Новости</a></li>
+          <li><a href="">Каталог</a></li>
+          <li><a href="">Доставка</a></li>
+          <li><a href="">Контакты</a></li>
         </ul>
-        <ul class="main-footer__site-navigation main-footer__site-navigation--bottom list">
-          <li class="list__item"><a href="">Материалы</a></li>
-          <li class="list__item"><a href="">Техника</a></li>
-          <li class="list__item"><a href="">Инструменты</a></li>
-          <li class="list__item"><a href="">Спецпредложения</a></li>
+        <ul class="main-footer__site-navigation main-footer__site-navigation--bottom">
+          <li><a href="">Материалы</a></li>
+          <li><a href="">Техника</a></li>
+          <li><a href="">Инструменты</a></li>
+          <li><a href="">Спецпредложения</a></li>
         </ul>
       </div>
 
@@ -99,10 +103,10 @@
           &copy; 2010-2020 Компания <q>Техномарт</q><br>
           Все права защищены
         </p>
-        <ul class="main-footer__social list">
-          <li class="list__item"><a class="button button--social" href="">Вконтакте</a></li>
-          <li class="list__item"><a class="button button--social" href="">Фейсбук</a></li>
-          <li class="list__item"><a class="button button--social" href="">Инстаграм</a></li>
+        <ul class="main-footer__social">
+          <li><a class="button button--social" href="">Вконтакте</a></li>
+          <li><a class="button button--social" href="">Фейсбук</a></li>
+          <li><a class="button button--social" href="">Инстаграм</a></li>
         </ul>
         <p class="main-footer__block--feedback">
           Обратная связь:<br>
@@ -114,5 +118,11 @@
         </p>
       </div>
     </footer>
+
+    <section class="modal modal--write-us">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <!-- Здесь будет форма -->
+      <span class="modal__close">x</span>
+    </section>
   </body>
 </html>
