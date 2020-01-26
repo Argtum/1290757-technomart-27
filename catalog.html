@@ -6,33 +6,33 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-header__navigation">
-        <div class="main-header__container--top">
-          <a class="main-header__logo" href="index.html">Техномарт</a>
-          <div class="main-header__search-form">
-            <h2 class="visually-hidden">Поиск по сайту</h2>
-            <!-- Здесь будет форма -->
-          </div>
-          <a class="main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
-          <a class="main-header__block--basket" href="">Корзина: <span>10</span></a>
-          <a class="main-header__block--checkout" href="">Оформить заказ</a>
+      <div class="main-header__container main-header__container--top">
+        <a class="main-header__logo" href="index.html">Техномарт</a>
+        <div class="main-header__search-form">
+          <h2 class="visually-hidden">Поиск по сайту</h2>
+          <!-- Здесь будет форма -->
         </div>
+        <a class="main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
+        <a class="main-header__block--basket" href="">Корзина: <span>10</span></a>
+        <a class="main-header__block--checkout" href="">Оформить заказ</a>
+      </div>
 
-        <div class="main-header__container--bottom">
-          <p class="main-header__text">
-            Интернет-магазин спортивных товаров и инструментов для ремонта
-          </p>
-          <p class="main-header__contacts">
-            <a class="button button--header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </p>
-          <div class="main-header__authentication">
-            <a class="main-header__button button button--logout">Равшан Джамшутович</a>
-            <ul class="main-header__user-menu">
-              <li><a href="">Мои заказы</a></li>
-              <li><a href="">Личный кабинет</a></li>
-            </ul>
-          </div>
+      <div class="main-header__container main-header__container--bottom">
+        <p class="main-header__text">
+          Интернет-магазин спортивных товаров и инструментов для ремонта
+        </p>
+        <p class="main-header__contacts">
+          <a class="button button--header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </p>
+        <div class="main-header__authentication">
+          <a class="main-header__button button button--logout">Равшан Джамшутович</a>
+          <ul class="main-header__user-menu">
+            <li><a href="">Мои заказы</a></li>
+            <li><a href="">Личный кабинет</a></li>
+          </ul>
+        </div>
+        <nav class="main-header__navigation">
           <ul class="main-header__site-navigation">
             <li><a href="">Главная</a></li>
             <li><a href="">Компания</a></li>
@@ -42,12 +42,12 @@
             <li><a href="">Доставка</a></li>
             <li><a href="">Контакты</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <main class="container">
-      <h1 class="page-title">Перфораторы</h1>
+      <h1 class="title">Перфораторы</h1>
       <ul class="breadcrumbs">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="catalog.html">Инструмент</a></li>
@@ -61,7 +61,7 @@
 
       <section class="catalog">
         <h2 class="visually-hidden">Список перфораторов</h2>
-        <ul class="catalog__list ">
+        <ul class="catalog__list">
           <li class="catalog__item catalog-item catalog-item--discount">
             <h3 class="catalog-item__title">
               <a href="">
@@ -105,8 +105,8 @@
               </a>
             </h3>
             <div class="catalog-item__button-block">
-              <button class="catalog-item__button button button--item--filled">Купить</button>
-              <button class="catalog-item__button button button--item--no-filed">В закладки</button>
+              <a class="catalog-item__button button button--item--filled" href="">Купить</a>
+              <a class="catalog-item__button button button--item--no-filed" href="">В закладки</a>
             </div>
             <p class="catalog-item__price">
               <span>12500 P.</span>
@@ -240,7 +240,7 @@
     </main>
 
     <footer class="main-footer">
-      <div class="main-footer__block--top">
+      <div class="main-footer__block main-footer__block--top">
         <a class="main-footer__logo" href="">Техномарт</a>
         <p class="main-footer__contacts">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -261,7 +261,7 @@
         </ul>
       </div>
 
-      <div class="main-footer__block--bottom">
+      <div class="main-footer__block main-footer__block--bottom">
         <p class="main-footer__copyright">
           &copy; 2010-2020 Компания <q>Техномарт</q><br>
           Все права защищены
@@ -271,11 +271,11 @@
           <li><a class="button button--social" href="">Фейсбук</a></li>
           <li><a class="button button--social" href="">Инстаграм</a></li>
         </ul>
-        <p class="main-footer__block--feedback">
+        <p class="main-footer__block main-footer__block--feedback">
           Обратная связь:<br>
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-        <p class="main-footer__block--developed">
+        <p class="main-footer__block main-footer__block--developed">
           Разработано &mdash;<br>
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
