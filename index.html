@@ -14,9 +14,9 @@
           <h2 class="visually-hidden">Поиск по сайту</h2>
           <!-- Здесь будет форма -->
         </div>
-        <a class="main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
-        <a class="main-header__block--basket" href="">Корзина: <span>0</span></a>
-        <a class="main-header__block--checkout" href="">Оформить заказ</a>
+        <a class="main-header__block main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
+        <a class="main-header__block main-header__block--basket" href="">Корзина: <span>0</span></a>
+        <a class="main-header__block main-header__block--checkout" href="">Оформить заказ</a>
       </div>
 
       <div class="main-header__container main-header__container--bottom">
@@ -52,26 +52,18 @@
         <h2 class="visually-hidden">Типы предоставляемой продукции</h2>
         <ul class="main-slider__list">
           <li class="main-slider__item main-slider__item--current">
-            <figure>
-              <img src="img/slide-image1.jpg" width="620" height="266" alt="Дрели">
-              <figcaption>
-                <p class="main-slider__text--type">Дрели</p>
-                <p class="main-slider__text--tagline">Соседям на рабость!</p>
-              </figcaption>
-            </figure>
+            <img src="img/slide-image1.jpg" width="620" height="266" alt="Дрели">
+            <p class="main-slider__text main-slider__text--type">Дрели</p>
+            <p class="main-slider__text main-slider__text--tagline">Соседям на рабость!</p>
             <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
             <button class="main-slider__button button button--slide--left"></button>
             <button class="main-slider__button button button--slide--right"></button>
           </li>
 
           <li class="main-slider__item">
-            <figure>
-              <img src="img/slide-image2.jpg" width="620" height="266" alt="Перфораторы">
-              <figcaption>
-                <p class="main-slider__text--type">Перфораторы</p>
-                <p class="main-slider__text--tagline">Настоящие мужские игрушки</p>
-              </figcaption>
-            </figure>
+            <img src="img/slide-image2.jpg" width="620" height="266" alt="Перфораторы">
+            <p class="main-slider__text main-slider__text--type">Перфораторы</p>
+            <p class="main-slider__text main-slider__text--tagline">Настоящие мужские игрушки</p>
             <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
             <button class="main-slider__button button button--slide--left"><</button>
             <button class="main-slider__button button button--slide--right">></button>
@@ -116,9 +108,7 @@
           <li class="popular-goods__item catalog-item catalog-item--discount">
             <h3 class="catalog-item__title">
               <a href="">
-                <span class="catalog-item__text catalog-item__text--type">Перфоратор</span>
-                <span class="catalog-item__text catalog-item__text--brand">Bosch</span>
-                <span class="catalog-item__text catalog-item__text--model">bfg 3000</span>
+                Перфоратор Bosch bfg 9000
               </a>
             </h3>
             <a href="img/item-image1@3x.jpg">
@@ -133,9 +123,7 @@
           <li class="popular-goods__item catalog-item catalog-item--discount">
             <h3 class="catalog-item__title">
               <a href="">
-                <span class="catalog-item__text catalog-item__text--type">Перфоратор</span>
-                <span class="catalog-item__text catalog-item__text--brand">Bosch</span>
-                <span class="catalog-item__text catalog-item__text--model">bfg 3000</span>
+                Перфоратор Bosch bfg 3000
               </a>
             </h3>
             <a href="img/item-image2@3x.jpg">
@@ -150,9 +138,7 @@
           <li class="popular-goods__item catalog-item catalog-item--discount">
             <h3 class="catalog-item__title">
               <a href="">
-                <span class="catalog-item__text catalog-item__text--type">Перфоратор</span>
-                <span class="catalog-item__text catalog-item__text--brand">Bosch</span>
-                <span class="catalog-item__text catalog-item__text--model">bfg 6000</span>
+                Перфоратор Bosch bfg 6000
               </a>
             </h3>
             <a href="img/item-image3@3x.jpg">
@@ -167,9 +153,7 @@
           <li class="popular-goods__item catalog-item catalog-item--new">
             <h3 class="catalog-item__title">
               <a href="">
-                <span class="catalog-item__text catalog-item__text--type">Перфоратор</span>
-                <span class="catalog-item__text catalog-item__text--brand">Bosch</span>
-                <span class="catalog-item__text catalog-item__text--model">bfg 2000</span>
+                Перфоратор Bosch bfg 2000
               </a>
             </h3>
             <a href="img/item-image4@3x.jpg">
@@ -254,7 +238,7 @@
                 поднимая его на ваш этаж!
               </p>
             </div>
-            <button class="services__selector services__selector--current">Доставка</button>
+            <a href="" class="services__selector services__selector--current">Доставка</a>
           </li>
 
           <li class="services__item">
@@ -267,7 +251,7 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </div>
-            <button class="services__selector">Гарантия</button>
+            <a href="" class="services__selector">Гарантия</a>
           </li>
 
           <li class="services__item">
@@ -277,9 +261,9 @@
                 Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
               </p>
-              <button class="service-card__button button button--main">Оправить заявку</button>
+              <a href="" class="service-card__button button button--main">Оправить заявку</a>
             </div>
-            <button class="services__selector">Кредит</button>
+            <a href="" class="services__selector">Кредит</a>
           </li>
         </ul>
       </section>
@@ -343,21 +327,15 @@
           <span class="main-footer__text">&copy; 2010-2020 Компания <q>Техномарт</q></span>
           <span class="main-footer__text">Все права защищены</span>
         </p>
-        <ul class="main-footer__social">
+        <ul class="main-footer__social social">
           <li>
-            <a class="button button--social" href="">
-              <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
-            </a>
+            <a class="social__button button button--social" href="">Вконтакте</a>
           </li>
           <li>
-            <a class="button button--social" href="">
-              <img src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
-            </a>
+            <a class="social__button button button--social" href="">Фейсбук</a>
           </li>
           <li>
-            <a class="button button--social" href="">
-              <img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
-            </a>
+            <a class="social__button button button--social" href="">Инстаграм</a>
           </li>
         </ul>
         <p class="main-footer__block main-footer__block--feedback">
@@ -373,7 +351,8 @@
 
     <section class="modal modal--map">
       <h2 class="visually-hidden">Наше местоположение</h2>
-      <img src="img/map-big.jpg" width="940" height="446" alt="Наше местоположение">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.218587316195!2d30.312790631577727!3d59.93862511774334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1580335393804!5m2!1sru!2sru"
+              width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       <span class="modal__close">x</span>
     </section>
 
