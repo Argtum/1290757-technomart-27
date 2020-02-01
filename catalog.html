@@ -61,8 +61,8 @@
         <p class="filters__text">Фильтр:</p>
         <form class="form form--filter" method="post" action="https://echo.htmlacademy.ru">
 
-          <div class="form__section">
-            <p class="form__text">Производители:</p>
+          <fieldset class="form__section">
+            <legend class="form__text">Производители:</legend>
             <ul class="form__field form__field--checkbox">
               <li>
                 <input id="filter-bosch" type="checkbox" name="bosch" checked>
@@ -85,10 +85,10 @@
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
-          <div class="form__section">
-            <p class="form__text">Питание:</p>
+          <fieldset class="form__section">
+            <legend class="form__text">Питание:</legend>
             <ul class="form__field form__field--radio">
               <li>
                 <input id="filter-rechargeable" type="radio" name="network" value="rechargeable" checked>
@@ -99,7 +99,7 @@
                 <label for="filter-network">Сетевые</label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
           <button class="form__button button button--white" type="submit">Показать</button>
         </form>
@@ -338,7 +338,7 @@
         <a class="modal__button button button--main" href="">Оформить заказ</a>
         <a class="modal__button button button--white" href="">Продолжить покупки</a>
       </div>
-      <span class="modal__close">x</span>
+      <button class="modal__close" aria-label="закрыть"></button>
     </section>
   </body>
 </html>
