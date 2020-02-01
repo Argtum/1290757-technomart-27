@@ -8,7 +8,7 @@
     <header class="main-header">
       <div class="main-header__container main-header__container--top">
         <a class="main-header__logo" href="index.html">
-          <img src="img/logo-technomart.svg" width="109" height="19" alt="Техномарт">
+          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип интернет-магазина Техномарт">
         </a>
         <div class="main-header__search-form">
           <h2 class="visually-hidden">Поиск по сайту</h2>
@@ -34,8 +34,8 @@
             <li><a href="">Личный кабинет</a></li>
           </ul>
         </div>
-        <nav class="main-header__navigation">
-          <ul class="main-header__site-navigation">
+        <nav class="main-header__navigation navigation navigation--header">
+          <ul class="navigation__list">
             <li><a href="index.html">Главная</a></li>
             <li><a href="">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -288,19 +288,21 @@
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           <span>+7 (812) 555-05-55</span>
         </p>
-        <ul class="main-footer__site-navigation main-footer__site-navigation--top">
-          <li><a href="">Компания</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
-        </ul>
-        <ul class="main-footer__site-navigation main-footer__site-navigation--bottom">
-          <li><a href="">Материалы</a></li>
-          <li><a href="">Техника</a></li>
-          <li><a href="">Инструменты</a></li>
-          <li><a href="">Спецпредложения</a></li>
-        </ul>
+        <nav class="main-footer__navigation navigation navigation--footer">
+          <ul class="navigation__list">
+            <li><a href="">Компания</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="">Доставка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+          <ul class="navigation__list--goods">
+            <li><a href="">Материалы</a></li>
+            <li><a href="">Техника</a></li>
+            <li><a href="">Инструменты</a></li>
+            <li><a href="">Спецпредложения</a></li>
+          </ul>
+        </nav>
       </div>
 
       <div class="main-footer__block main-footer__block--bottom">
@@ -310,13 +312,13 @@
         </p>
         <ul class="main-footer__social social">
           <li>
-            <a class="social__button button button--social" href="">Вконтакте</a>
+            <a class="social__button button button--social" href="https://vk.com/" aria-label="Вконтакте"></a>
           </li>
           <li>
-            <a class="social__button button button--social" href="">Фейсбук</a>
+            <a class="social__button button button--social" href="https://facebook.com/" aria-label="Фейсбук"></a>
           </li>
           <li>
-            <a class="social__button button button--social" href="">Инстаграм</a>
+            <a class="social__button button button--social" href="https://instagram.com/" aria-label="Инстаграм"></a>
           </li>
         </ul>
         <p class="main-footer__block main-footer__block--feedback">
