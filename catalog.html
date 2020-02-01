@@ -12,7 +12,11 @@
         </a>
         <div class="main-header__search-form">
           <h2 class="visually-hidden">Поиск по сайту</h2>
-          <!-- Здесь будет форма -->
+          <form class="form form--search" method="post" action="https://echo.htmlacademy.ru">
+            <button class="form-button button button--search" type="submit" aria-label="Найти"></button>
+            <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+            <input id="search-field" type="text" name="search-field" placeholder="Поиск:">
+          </form>
         </div>
         <a class="main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
         <a class="main-header__block--basket" href="">Корзина: <span>10</span></a>
@@ -60,7 +64,6 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <p class="filters__text">Фильтр:</p>
         <form class="form form--filter" method="post" action="https://echo.htmlacademy.ru">
-
           <fieldset class="form__section">
             <legend class="form__text">Производители:</legend>
             <ul class="form__field form__field--checkbox">
@@ -100,7 +103,6 @@
               </li>
             </ul>
           </fieldset>
-
           <button class="form__button button button--white" type="submit">Показать</button>
         </form>
       </section>

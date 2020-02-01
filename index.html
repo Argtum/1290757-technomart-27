@@ -12,7 +12,11 @@
         </a>
         <div class="main-header__search-form">
           <h2 class="visually-hidden">Поиск по сайту</h2>
-          <!-- Здесь будет форма -->
+          <form class="form form--search" method="post" action="https://echo.htmlacademy.ru">
+            <button class="form-button button button--search" type="submit" aria-label="Найти"></button>
+            <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+            <input id="search-field" type="text" name="search-field" placeholder="Поиск:">
+          </form>
         </div>
         <a class="main-header__block main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
         <a class="main-header__block main-header__block--basket" href="">Корзина: <span>0</span></a>
