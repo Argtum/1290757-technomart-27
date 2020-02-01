@@ -65,8 +65,8 @@
             <p class="main-slider__text main-slider__text--type">Перфораторы</p>
             <p class="main-slider__text main-slider__text--tagline">Настоящие мужские игрушки</p>
             <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
-            <button class="main-slider__button button button--slide--left"><</button>
-            <button class="main-slider__button button button--slide--right">></button>
+            <button class="main-slider__button button button--slide--left">&lt;</button>
+            <button class="main-slider__button button button--slide--right">&gt;</button>
           </li>
         </ul>
       </section>
@@ -352,13 +352,29 @@
     <section class="modal modal--map">
       <h2 class="visually-hidden">Наше местоположение</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.218587316195!2d30.312790631577727!3d59.93862511774334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1580335393804!5m2!1sru!2sru"
-              width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
       <span class="modal__close">x</span>
     </section>
 
     <section class="modal modal--write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!-- Здесь будет форма -->
+      <form class="form form--write-us" method="post" action="https://echo.htmlacademy.ru">
+        <p class="form__field">
+          <label for="write-us-login">Ваше имя:</label>
+          <input id="write-us-login" type="text" name="login" placeholder="Имя Фамилия">
+        </p>
+        <p class="form__field">
+          <label for="write-us-email">Ващ e-mail:</label>
+          <input id="write-us-email" type="password" name="email" placeholder="email@example.com">
+        </p>
+        <p class="form__field form__field--textarea">
+          <label for="write-us-message">Ващ e-mail:</label>
+          <textarea id="write-us-message" name="message" rows="5">В свободной форме</textarea>
+        </p>
+        <div class="modal__footer">
+          <button class="form__button button button--main button--full-size" type="submit">Отправить</button>
+        </div>
+      </form>
       <span class="modal__close">x</span>
     </section>
   </body>

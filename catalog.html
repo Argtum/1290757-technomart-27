@@ -58,7 +58,63 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <p class="filters__text">Фильтр:</p>
+        <form class="form form--filter" method="post" action="https://echo.htmlacademy.ru">
+
+          <div class="form__section">
+            <p class="form__text">Производители:</p>
+            <ul class="form__field form__field--checkbox">
+              <li>
+                <input id="filter-bosch" type="checkbox" name="bosch" checked>
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li>
+                <input id="filter-interskol" type="checkbox" name="interskol">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li>
+                <input id="filter-makita" type="checkbox" name="makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li>
+                <input id="filter-dewalt" type="checkbox" name="dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li>
+                <input id="filter-hitachi" type="checkbox" name="hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="form__section">
+            <p class="form__text">Питание:</p>
+            <ul class="form__field form__field--radio">
+              <li>
+                <input id="filter-rechargeable" type="radio" name="network" value="rechargeable" checked>
+                <label for="filter-rechargeable">Аккумуляторные</label>
+              </li>
+              <li>
+                <input id="filter-network" type="radio" name="network" value="network">
+                <label for="filter-network">Сетевые</label>
+              </li>
+            </ul>
+          </div>
+
+          <button class="form__button button button--white" type="submit">Показать</button>
+        </form>
+      </section>
+
+      <section class="sorting">
+        <h2 class="visually-hidden">Сортировка товаров</h2>
+        <p class="sorting__text">Сортировка:</p>
+        <ul class="sorting__list">
+          <li class="sorting__item sorting__item--with-text sorting__item--current"><a href="">По цене</a></li>
+          <li class="sorting__item sorting__item--with-text"><a href="">По типу</a></li>
+          <li class="sorting__item sorting__item--with-text"><a href="">По функционалу</a></li>
+          <li class="sorting__item sorting__item--current"><a href=""></a></li>
+          <li class="sorting__item"><a href=""></a></li>
+        </ul>
       </section>
 
       <section class="catalog">
@@ -276,7 +332,10 @@
 
     <section class="modal modal--added-to-cart">
       <h2 class="visually-hidden">Товар добавлен в корзину</h2>
-      <!-- Здесь будет форма -->
+      <div class="modal__footer">
+        <a class="modal__button button button--main" href="">Оформить заказ</a>
+        <a class="modal__button button button--white" href="">Продолжить покупки</a>
+      </div>
       <span class="modal__close">x</span>
     </section>
   </body>
