@@ -58,6 +58,7 @@
         <h1 class="title">Перфораторы</h1>
 
         <section class="breadcrumbs">
+          <h2 class="visually-hidden">Хлебные крошки</h2>
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item breadcrumbs__item--home"><a href="index.html" aria-label="На главную"></a></li>
             <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
@@ -69,6 +70,22 @@
         <section class="filters">
           <h2 class="filters__title">Фильтр:</h2>
           <form class="form form--filter" method="post" action="https://echo.htmlacademy.ru">
+            <fieldset class="form__fieldset">
+              <legend class="form__text">Цена:</legend>
+              <p class="form__field form__field--range">
+                <label class="visually-hidden" for="filter-price-range">Диапазон цен</label>
+                <input type="range" id="filter-price-range" name="price-range" min="0" max="35000" step="1000">
+              </p>
+              <p class="form__field form__field--range-output">
+                <label class="visually-hidden" for="filter-range-min-price">Цена от</label>
+                <input id="filter-range-min-price" type="text" name="min-price">
+              </p>
+              <p class="form__field form__field--range-output">
+                <label class="visually-hidden" for="filter-range-max-price">Цена до</label>
+                <input id="filter-range-max-price" type="text" name="max-price">
+              </p>
+            </fieldset>
+
             <fieldset class="form__fieldset">
               <legend class="form__text">Производители:</legend>
               <ul class="form__fields-list form__fields-list--checkbox">
