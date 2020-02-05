@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -16,9 +18,9 @@
             <input id="search-field" type="text" name="search-field" placeholder="Поиск:">
             <button class="form-button button button--search" type="submit" aria-label="Найти"></button>
           </form>
-          <a class="main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
-          <a class="main-header__block--basket" href="">Корзина: <span>10</span></a>
-          <a class="main-header__block--checkout" href="">Оформить заказ</a>
+          <a class="main-header__block main-header__block--bookmarks" href="">Закладки: <span>0</span></a>
+          <a class="main-header__block main-header__block--basket" href="">Корзина: <span>10</span></a>
+          <a class="main-header__block main-header__block--checkout" href="">Оформить заказ</a>
         </div>
       </div>
 
@@ -28,11 +30,11 @@
             Интернет-магазин спортивных товаров и инструментов для ремонта
           </p>
           <p class="main-header__contacts">
-            <a class="button button--header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <a class="main-header__button button button--phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
           <div class="main-header__authentication">
-            <a class="main-header__button button button--logout">Равшан Джамшутович</a>
+            <a class="main-header__button button button--white button--logout">Равшан Джамшутович</a>
             <ul class="main-header__user-menu">
               <li><a href="">Мои заказы</a></li>
               <li><a href="">Личный кабинет</a></li>
@@ -55,7 +57,7 @@
 
     <main>
       <div class="container">
-        <h1 class="title">Перфораторы</h1>
+        <h1 class="page-title">Перфораторы</h1>
 
         <section class="breadcrumbs">
           <h2 class="visually-hidden">Хлебные крошки</h2>
@@ -67,10 +69,10 @@
           </ul>
         </section>
 
-        <section class="filters">
-          <h2 class="filters__title">Фильтр:</h2>
+        <section class="filters catalog-page-section">
+          <h2 class="filters__title catalog-page-section__title">Фильтр:</h2>
           <form class="form form--filter" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset form__fieldset--price">
               <legend class="form__text">Цена:</legend>
               <p class="form__field form__field--range">
                 <label class="visually-hidden" for="filter-price-range">Диапазон цен</label>
@@ -81,6 +83,7 @@
                 <input id="filter-range-min-price" type="text" name="min-price">
               </p>
               <p class="form__field form__field--range-output">
+                <span>&#8211;</span>
                 <label class="visually-hidden" for="filter-range-max-price">Цена до</label>
                 <input id="filter-range-max-price" type="text" name="max-price">
               </p>
@@ -125,12 +128,12 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="form__button button button--white" type="submit">Показать</button>
+            <button class="form__button button button--white button--filter" type="submit">Показать</button>
           </form>
         </section>
 
-        <section class="sorting">
-          <h2 class="sorting__title">Сортировка:</h2>
+        <section class="sorting catalog-page-section">
+          <h2 class="sorting__title catalog-page-section__title">Сортировка:</h2>
           <ul class="sorting__list sorting__list--with-text">
             <li class="sorting__item sorting__item--current"><a href="">По цене</a></li>
             <li class="sorting__item"><a href="">По типу</a></li>

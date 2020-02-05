@@ -48,6 +48,14 @@ body {
   font-family: 'Cuprum', Arial, sans-serif;
 }
 
+fieldset {
+  border: none;
+}
+
+button {
+  border: none;
+}
+
 ul {
   list-style: none;
 }
@@ -88,6 +96,23 @@ a {
 
 .button--advantage {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button--logout {
+  font-size: 21px;
+}
+
+.button--filter {
+  font-family: 'PT Sans', Arial, sans-serif;
+}
+
+.button--item--filled {
+  background-color: #63a63e;
+}
+
+.button--item--no-filed {
+  color: #32425c;
+  background-color: #ffffff;
 }
 
 .navigation--header {
@@ -162,10 +187,29 @@ a {
   color: #000000;
 }
 
+.form__fields-list--checkbox label,
+.form__fields-list--radio label {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: #000000;
+}
+
+
 .form__fields-list input[placeholder] {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   color: #a9a9a9;
+}
+
+.form__fieldset--price p {
+  background-color: #f7f3ec;
+}
+
+.form__text {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #000000;
 }
 
 
@@ -212,6 +256,12 @@ a {
 
 .main-header__button {
   font-size: 21px;
+}
+
+.main-header__user-menu {
+  font-size: 16px;
+  color: #32425c;
+  text-decoration: underline;
 }
 
 
@@ -277,6 +327,56 @@ a {
 .about-company__item a {
   font-size: 18px;
   color: #000000;
+}
+
+.page-title {
+  font-size: 30px;
+  color: #32425c;
+}
+
+.breadcrumbs {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  color: #000000;
+}
+
+.catalog-page-section__title {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  color: #000000;
+}
+
+.filters__title {
+  background-color: #f7f3ec;
+}
+
+.sorting__list {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting__item--current {
+  color: #ee3643;
+}
+
+.catalog-item__motivator {
+  background-color: #ee3643;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-size: 13px;
+}
+
+.pagination {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pagination__item--current {
+  background-color: #ee3643;
+  color: #ffffff;
 }
 
 
