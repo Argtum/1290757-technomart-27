@@ -44,6 +44,12 @@
   url('../fonts/ptsansbold.woff') format('woff');
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Cuprum', Arial, sans-serif;
 }
@@ -62,6 +68,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 940px;
 }
 
 .catalog-page {
@@ -313,16 +324,20 @@ a {
 
 
 
-.main-header__logo {
+.main-header__logo,
+.main-footer__logo {
   background-color: #ee3643;
 }
 
 .main-header__logo:hover,
-.main-header__logo:focus {
+.main-header__logo:focus,
+.main-footer__logo:hover,
+.main-footer__logo:focus {
   background-color: #ca2c37;
 }
 
-.main-header__logo:active {
+.main-header__logo:active,
+.main-footer__logo:active {
   background-color: #ba2732;
 }
 
