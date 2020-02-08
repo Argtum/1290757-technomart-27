@@ -202,7 +202,6 @@ a {
 
 .navigation__list {
   list-style: none;
-  padding: 0 22px;
   display: flex;
   justify-content: space-around;
   margin: 0;
@@ -217,6 +216,10 @@ a {
 
 .navigation__list a {
   color: #ffffff;
+}
+
+.navigation--header .navigation__list {
+  padding: 0 22px;
 }
 
 .navigation--header li:hover,
@@ -237,6 +240,14 @@ a {
 .navigation--footer li:active {
   opacity: 0.5;
   text-decoration: none;
+}
+
+.navigation--footer .navigation__list {
+  justify-content: flex-end;
+}
+
+.navigation--footer li:last-child {
+  padding-right: 0;
 }
 
 .navigation__list--goods a {
@@ -412,7 +423,7 @@ a {
   display: block;
   width: 220px;
   padding: 15px 55px 11px;
-  box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.24);
   margin-bottom: -5px;
 }
 
@@ -716,22 +727,71 @@ a {
 
 
 
-.main-footer__block {
+.main-footer__container {
   font-size: 18px;
   color: #ffffff;
 }
 
-.main-footer__block--top {
+.main-footer__container--top {
   background-color: #32425c;
+  padding-bottom: 35px;
+}
+
+.main-footer__container--bottom {
+  background-color: #293449;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.main-footer__container--top .container,
+.main-footer__container--bottom .container {
+  display: flex;
+}
+
+.main-footer__container--bottom .container {
+  justify-content: space-between;
+}
+
+.main-footer__logo {
+  display: block;
+  width: 220px;
+  padding: 20px 40px 15px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.24);
+  margin-bottom: -5px;
+}
+
+.main-footer__navigation {
+  margin-top: 20px;
 }
 
 .main-footer__contacts {
   line-height: 1.33;
   color: #f3f7f9;
+  width: 322px;
+  margin-top: 30px;
 }
 
-.main-footer__block--bottom {
-  background-color: #293449;
+.main-footer__copyright {
+  width: 235px;
+}
+
+.main-footer__social {
+  list-style: none;
+}
+
+.main-footer__feedback {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding-right: 15px;
+}
+
+.main-footer__feedback .main-footer__block--feedback {
+  width: 135px;
+}
+
+.main-footer__feedback .main-footer__block--developed {
+  width: 95px;
 }
 
 .main-footer__text {
@@ -741,8 +801,4 @@ a {
 .main-footer__link {
   font-size: 16px;
   color: #ffd180;
-}
-
-.main-footer__social {
-  list-style: none;
 }
