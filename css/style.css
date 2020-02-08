@@ -3,67 +3,49 @@
   font-family: 'Cuprum';
   font-style: normal;
   font-weight: 400;
-  src: local('Cuprum Regular'), local('Cuprum-Regular'),
-  url('../fonts/cuprum.woff2') format('woff2'),
-  url('../fonts/cuprum.woff') format('woff');
+  src: url('../fonts/cuprum.woff2') format('woff2'), url('../fonts/cuprum.woff') format('woff');
 }
 /* cuprum-italic - cyrillic */
 @font-face {
   font-family: 'Cuprum';
   font-style: italic;
   font-weight: 400;
-  src: local('Cuprum Italic'), local('Cuprum-Italic'),
-  url('../fonts/cuprumitalic.woff2') format('woff2'),
-  url('../fonts/cuprumitalic.woff') format('woff');
+  src: url('../fonts/cuprumitalic.woff2') format('woff2'), url('../fonts/cuprumitalic.woff') format('woff');
 }
 /* cuprum-700 - cyrillic */
 @font-face {
   font-family: 'Cuprum';
   font-style: normal;
   font-weight: 700;
-  src: local('Cuprum Bold'), local('Cuprum-Bold'),
-  url('../fonts/cuprumbold.woff2') format('woff2'),
-  url('../fonts/cuprumbold.woff') format('woff');
+  src: url('../fonts/cuprumbold.woff2') format('woff2'), url('../fonts/cuprumbold.woff') format('woff');
 }
 /* pt-sans-regular - cyrillic */
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-  url('../fonts/ptsans.woff2') format('woff2'),
-  url('../fonts/ptsans.woff') format('woff');
+  src: url('../fonts/ptsans.woff2') format('woff2'), url('../fonts/ptsans.woff') format('woff');
 }
 /* pt-sans-700 - cyrillic */
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-  url('../fonts/ptsansbold.woff2') format('woff2'),
-  url('../fonts/ptsansbold.woff') format('woff');
+  src: url('../fonts/ptsansbold.woff2') format('woff2'), url('../fonts/ptsansbold.woff') format('woff');
+}
+
+html {
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
   font-family: 'Cuprum', Arial, sans-serif;
-}
-
-fieldset {
-  border: none;
-}
-
-button {
-  border: none;
-}
-
-ul {
-  list-style: none;
 }
 
 a {
@@ -108,22 +90,27 @@ a {
   background-color: #f4f7f9;
 }
 
-.button--slide:hover,
-.button--slide:focus {
+.button--main:hover,
+.button--main:focus {
   background-color: #ca2c37;
 }
 
-.button--slide:active {
+.button--main:active {
   background-color: #ba2732;
 }
 
 .button--slide--left,
 .button--slide--right {
   background-color: unset;
+  border: none;
 }
 
 .button--advantage {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button--search {
+  border: none;
 }
 
 .button--advantage:hover,
@@ -157,6 +144,7 @@ a {
 
 .button--filter {
   font-family: 'PT Sans', Arial, sans-serif;
+  border: none;
 }
 
 .button--item--filled {
@@ -189,6 +177,10 @@ a {
 
 .navigation--header {
   background-color: #32425c;
+}
+
+.navigation__list {
+  list-style: none;
 }
 
 .navigation__list a {
@@ -249,6 +241,13 @@ a {
   color: #ffffff;
 }
 
+.catalog-item__motivator {
+  background-color: #ee3643;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-size: 13px;
+}
+
 .section__title {
   font-size: 30px;
   color: #000000;
@@ -274,17 +273,21 @@ a {
   color: #000000;
 }
 
+.form__fields-list {
+  list-style: none;
+}
+
 .form__fields-list label {
   font-size: 18px;
   color: #000000;
 }
+
 
 .form__fields-list--checkbox label,
 .form__fields-list--radio label {
   font-size: 15px;
   color: #000000;
 }
-
 
 .form__fields-list input[placeholder] {
   font-family: 'PT Sans', Arial, sans-serif;
@@ -294,6 +297,10 @@ a {
 
 .form__fieldset--price p {
   background-color: #f7f3ec;
+}
+
+.form fieldset {
+  border: none;
 }
 
 .form__text {
@@ -323,6 +330,14 @@ a {
 
 
 
+
+.modal__close {
+  border: none;
+}
+
+.main-footer__social {
+  list-style: none;
+}
 
 .main-header__logo,
 .main-footer__logo {
@@ -408,6 +423,7 @@ a {
   font-size: 16px;
   color: #32425c;
   text-decoration: underline;
+  list-style: none;
 }
 
 .main-header__user-menu:hover,
@@ -415,16 +431,36 @@ a {
   color: #ee3643;
 }
 
-.main-header__user-menu:focus {
-  color: rgba(50, 66, 92, 0.3);
+.popular-goods__list {
+  list-style: none;
+}
+
+.popular-producers__list {
+  list-style: none;
+}
+
+.services__list {
+  list-style: none;
+}
+
+.about-company__list {
+  list-style: none;
 }
 
 
 
 
 
+.main-header__user-menu:focus {
+  color: rgba(50, 66, 92, 0.3);
+}
+
 .main-slider {
   color: #ffffff;
+}
+
+.main-slider__list {
+  list-style: none;
 }
 
 .main-slider__text--type {
@@ -441,6 +477,10 @@ a {
   font-size: 24px;
   font-weight: bold;
   color: #ffffff;
+}
+
+.advantages__list {
+  list-style: none;
 }
 
 .advantages__item:first-child {
@@ -505,6 +545,10 @@ a {
   color: #000000;
 }
 
+.breadcrumbs__list {
+  list-style: none;
+}
+
 .catalog-page-section__title {
   font-size: 13px;
   color: #000000;
@@ -518,6 +562,7 @@ a {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
+  list-style: none;
 }
 
 .sorting__item:hover,
@@ -529,22 +574,23 @@ a {
   color: #ee3643;
 }
 
-.catalog-item__motivator {
-  background-color: #ee3643;
-  color: #ffffff;
-  text-transform: lowercase;
-  font-size: 13px;
-}
-
 .pagination {
   font-size: 13px;
   color: #000000;
   text-transform: uppercase;
 }
 
+.pagination__list {
+  list-style: none;
+}
+
 .pagination__item--current {
   background-color: #ee3643;
   color: #ffffff;
+}
+
+.catalog__list {
+  list-style: none;
 }
 
 
