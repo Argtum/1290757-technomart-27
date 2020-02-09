@@ -57,6 +57,13 @@ a {
   width: 940px;
 }
 
+.container-wrapper {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 85px;
+  justify-content: space-between;
+}
+
 .catalog-page {
   font-family: 'PT Sans', Arial, sans-serif;
 }
@@ -78,6 +85,10 @@ a {
   color: #ffffff;
   background-color: #ee3643;
   text-transform: uppercase;
+
+  display: block;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .button--white {
@@ -106,7 +117,12 @@ a {
 }
 
 .button--advantage {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  padding: 12px;
+  width: 135px;
+  margin-top: 15px;
 }
 
 .button--search {
@@ -115,17 +131,18 @@ a {
 
 .button--advantage:hover,
 .button--advantage:focus {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .button--advantage:active {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .button--login,
 .button--registration {
   font-size: 21px;
   text-transform: capitalize;
+
   display: block;
 }
 
@@ -157,12 +174,14 @@ a {
 
 .button--logout {
   font-size: 21px;
+
   padding-left: 45px;
   padding-right: 65px;
 }
 
 .button--filter {
   font-family: 'PT Sans', Arial, sans-serif;
+
   border: none;
 }
 
@@ -197,21 +216,24 @@ a {
 .navigation--header {
   background-color: #32425c;
   box-shadow: inset 0 -5px 0 0 #293449;
+
   margin-bottom: -5px;
 }
 
 .navigation__list {
   list-style: none;
+
   display: flex;
   justify-content: space-around;
   margin: 0;
 }
 
 .navigation__list li {
+  line-height: 60px;
+
   height: 60px;
   padding-left: 30px;
   padding-right: 30px;
-  line-height: 60px;
 }
 
 .navigation__list a {
@@ -295,6 +317,7 @@ a {
   font-size: 30px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .section__text {
@@ -302,6 +325,17 @@ a {
   font-size: 13px;
   line-height: 1.85;
   color: #000000;
+
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.section__text--about-company {
+  width: 390px;
+}
+
+.section__text--contacts {
+  width: 180px;
 }
 
 .service-card__title {
@@ -491,6 +525,7 @@ a {
   font-style: italic;
   line-height: 1.44;
   color: #ee3643;
+
   width: 255px;
   padding-left: 55px;
 }
@@ -504,14 +539,16 @@ a {
 .main-header__contacts a {
   font-size: 21px;
   color: #ee3643;
+  text-align: left;
+
   margin-bottom: 5px;
   display: block;
-  text-align: left;
 }
 
 .main-header__phone {
   font-size: 21px;
   width: 270px;
+
   border: 3px solid #ffffff;
   padding: 9px 15px 9px 70px;
   display: block;
@@ -536,6 +573,7 @@ a {
   color: #32425c;
   text-decoration: underline;
   list-style: none;
+
   display: flex;
   padding-left: 15px;
   margin-top: 7px;
@@ -576,10 +614,6 @@ a {
   list-style: none;
 }
 
-.about-company__list {
-  list-style: none;
-}
-
 
 
 
@@ -611,6 +645,24 @@ a {
 
 .advantages__list {
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.advantages__item {
+  width: 300px;
+  height: 125px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__list li:nth-child(3n) {
+  margin-right: 0;
 }
 
 .advantages__item:first-child {
@@ -660,9 +712,51 @@ a {
   color: #32425c;
 }
 
+.about-company {
+  width: 580px;
+}
+
 .about-company__item a {
   font-size: 18px;
   color: #000000;
+}
+
+.about-company__list {
+  list-style: none;
+
+  margin-bottom: 0;
+  margin-top: 20px;
+  padding-left: 35px;
+}
+
+.about-company__list li {
+  margin-bottom: 20px;
+}
+
+.about-company__list li:last-child {
+  margin-bottom: 0;
+}
+.about-company__button {
+  width: 220px;
+  margin-top: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+.contacts {
+  width: 300px;
+}
+
+.contacts__map {
+  margin-top: 30px;
+  display: block;
+}
+
+.contacts__button {
+  text-align: center;
+
+  margin-top: 35px;
 }
 
 .page-title {
@@ -734,11 +828,13 @@ a {
 
 .main-footer__container--top {
   background-color: #32425c;
+
   padding-bottom: 35px;
 }
 
 .main-footer__container--bottom {
   background-color: #293449;
+
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -767,6 +863,7 @@ a {
 .main-footer__contacts {
   line-height: 1.33;
   color: #f3f7f9;
+
   width: 322px;
   margin-top: 30px;
 }
