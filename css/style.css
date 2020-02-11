@@ -52,6 +52,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin: 0 auto;
   width: 940px;
@@ -78,12 +83,22 @@ a {
   display: none;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -129,6 +144,10 @@ a {
 
 .button--search {
   border: none;
+}
+
+.button--social {
+  background-color: unset;
 }
 
 .button--advantage:hover,
@@ -241,53 +260,52 @@ a {
 .navigation__list {
   list-style: none;
 
-  display: flex;
-  justify-content: space-around;
+  padding-left: 0;
   margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.navigation__list li {
-  line-height: 60px;
-
-  height: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
+.navigation__item {
+  flex-grow: 1;
+  text-align: center;
 }
 
-.navigation__list a {
+.navigation__item a {
   color: #ffffff;
+
+  display: block;
+  padding: 20px 30px;
 }
 
-.navigation--header .navigation__list {
-  padding: 0 22px;
-}
-
-.navigation--header li:hover,
-.navigation--header li:focus {
+.navigation--header .navigation__item:hover,
+.navigation--header .navigation__item:focus {
   background-color: #293449;
 }
 
-.navigation--header li:active {
+.navigation--header .navigation__item:active {
   background-color: #1d2739;
   color: rgba(255, 255, 255, 0.5);
 }
 
-.navigation--footer li:hover,
-.navigation--footer li:focus {
+.navigation--footer {
+  margin-right: -30px;
+}
+
+.navigation--footer .navigation__item:hover,
+.navigation--footer .navigation__item:focus {
   text-decoration: underline;
 }
 
-.navigation--footer li:active {
+.navigation--footer .navigation__item:active {
   opacity: 0.5;
   text-decoration: none;
 }
 
 .navigation--footer .navigation__list {
   justify-content: flex-end;
-}
-
-.navigation--footer li:last-child {
-  padding-right: 0;
 }
 
 .navigation__list--goods a {
@@ -404,10 +422,18 @@ a {
   line-height: 27px;
 }
 
+.section {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
 .section__title {
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
   color: #000000;
   text-transform: uppercase;
+  font-weight: 400;
+
   margin: 0;
 }
 
@@ -500,6 +526,23 @@ a {
   border: none;
 }
 
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 135px;
+  align-items: center;
+}
+
+.social_item {
+  width: 42px;
+  height: 42px;
+  background-color: #212a3a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -604,7 +647,7 @@ a {
 
 .main-header__content {
   display: flex;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   justify-content: space-between;
 }
 
@@ -639,11 +682,12 @@ a {
 
 .main-header__phone {
   font-size: 21px;
-  width: 270px;
 
-  border: 3px solid #ffffff;
-  padding: 9px 15px 9px 70px;
   display: block;
+
+  width: 270px;
+  padding: 9px 15px 9px 75px;
+  border: 3px solid #ffffff;
 }
 
 .main-header__authentication {
@@ -656,8 +700,7 @@ a {
 
 .main-header__button {
   display: block;
-  height: 45px;
-  line-height: 45px;
+  padding: 10px 70px 10px 45px;
 }
 
 .main-header__user-menu {
@@ -992,9 +1035,9 @@ a {
 
 .pagination__list {
   list-style: none;
-  margin: 40px 0 0;
-  padding-left: 0;
 
+  margin: 0;
+  padding-left: 0;
   display: flex;
 }
 
@@ -1047,6 +1090,16 @@ a {
   margin-right: 20px;
 }
 
+.catalog__pagination {
+  margin-top: 45px;
+}
+
+.about-product {
+  background-color: #f4f7f9;
+
+  margin-top: 60px;
+}
+
 
 
 
@@ -1072,6 +1125,10 @@ a {
 .main-footer__container--top .container,
 .main-footer__container--bottom .container {
   display: flex;
+}
+
+.main-footer__container--top .container {
+  justify-content: space-between;
 }
 
 .main-footer__container--bottom .container {
@@ -1104,6 +1161,8 @@ a {
 
 .main-footer__social {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .main-footer__feedback {
