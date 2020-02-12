@@ -67,10 +67,16 @@
               <p class="main-slider__text main-slider__text--type">Дрели</p>
               <p class="main-slider__text main-slider__text--tagline">Соседям на радость!</p>
               <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
-              <button type="button" class="main-slider__button button button--slide--left"
-                      aria-label="Вперёд">&lt;</button>
-              <button type="button" class="main-slider__button button button--slide--right"
-                      aria-label="Назад">&gt;</button>
+              <button type="button" class="main-slider__nav-button button button--slide--left" aria-label="Вперёд">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                  <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/>
+                </svg>
+              </button>
+              <button type="button" class="main-slider__nav-button button button--slide--right" aria-label="Назад">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                  <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/>
+                </svg>
+              </button>
             </li>
 
             <li class="main-slider__item">
@@ -78,9 +84,9 @@
               <p class="main-slider__text main-slider__text--type">Перфораторы</p>
               <p class="main-slider__text main-slider__text--tagline">Настоящие мужские игрушки</p>
               <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
-              <button type="button" class="main-slider__button button button--slide--left"
+              <button type="button" class="main-slider__nav-button button button--slide--left"
                       aria-label="Вперёд">&lt;</button>
-              <button type="button" class="main-slider__button button button--slide--right"
+              <button type="button" class="main-slider__nav-button button button--slide--right"
                       aria-label="Назад">&gt;</button>
             </li>
           </ul>
@@ -123,39 +129,36 @@
             <a class="main-section-header__button button button--main" href="">Все популярные товары</a>
           </header>
           <ul class="popular-goods__list">
-            <li class="popular-goods__item catalog-item catalog-item--discount">
-              <a href="">
-                <h3 class="catalog-item__title">Перфоратор Bosch bfg 9000</h3>
+            <li class="popular-goods__item catalog-item">
+              <a class="catalog-item__title" href="">
+                <h3>Перфоратор <span>Bosch bfg 9000</span></h3>
               </a>
-              <a href="img/item-image1@3x.jpg">
-                <img src="img/item-image1.jpg" width="218" height="170" alt="Перфоратор Bosch bfg 9000">
-              </a>
+              <img class="catalog-item__image" src="img/item-image1.jpg" width="218" height="170"
+                   alt="Перфоратор Bosch bfg 9000">
               <p class="catalog-item__price">
                 <del>32500 Р.</del>
                 <span>25500 P.</span>
               </p>
             </li>
 
-            <li class="popular-goods__item catalog-item catalog-item--discount">
-              <a href="">
-                <h3 class="catalog-item__title">Перфоратор Bosch bfg 3000</h3>
+            <li class="popular-goods__item catalog-item">
+              <a class="catalog-item__title" href="">
+                <h3>Перфоратор <span>Bosch bfg 3000</span></h3>
               </a>
-              <a href="img/item-image2@3x.jpg">
-                <img src="img/item-image2.jpg" width="218" height="170" alt="Перфоратор Bosch bfg 3000">
-              </a>
+              <img class="catalog-item__image" src="img/item-image2.jpg" width="218" height="170"
+                   alt="Перфоратор Bosch bfg 3000">
               <p class="catalog-item__price">
                 <del>22500 Р.</del>
                 <span>15500 P.</span>
               </p>
             </li>
 
-            <li class="popular-goods__item catalog-item catalog-item--discount">
-              <a href="">
-                <h3 class="catalog-item__title">Перфоратор Bosch bfg 6000</h3>
+            <li class="popular-goods__item catalog-item">
+              <a class="catalog-item__title" href="">
+                <h3>Перфоратор <span>Bosch bfg 6000</span></h3>
               </a>
-              <a href="img/item-image3@3x.jpg">
-                <img src="img/item-image3.jpg" width="218" height="170" alt="Перфоратор Bosch bfg 6000">
-              </a>
+              <img class="catalog-item__image" src="img/item-image3.jpg" width="218" height="170"
+                   alt="Перфоратор Bosch bfg 6000">
               <p class="catalog-item__price">
                 <del>30500 Р.</del>
                 <span>25500 P.</span>
@@ -163,13 +166,12 @@
             </li>
 
             <li class="popular-goods__item catalog-item catalog-item--new">
-              <a href="">
-                <h3 class="catalog-item__title">Перфоратор Bosch bfg 2000</h3>
+              <a class="catalog-item__title" href="">
+                <h3>Перфоратор <span>Bosch bfg 2000</span></h3>
               </a>
-              <a href="img/item-image4@3x.jpg">
-                <img src="img/item-image4.jpg" width="218" height="170" alt="Перфоратор Bosch bfg 2000">
-              </a>
-              <p class="catalog-item__price">
+              <img class="catalog-item__image" src="img/item-image4.jpg" width="218" height="170"
+                   alt="Перфоратор Bosch bfg 2000">
+              <p class="catalog-item__price catalog-item__price--no-discount">
                 <span>12500 P.</span>
               </p>
               <span class="catalog-item__motivator">New</span>
