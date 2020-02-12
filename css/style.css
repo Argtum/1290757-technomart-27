@@ -302,14 +302,22 @@ input[type="radio"].visually-hidden {
   padding: 20px 30px;
 }
 
+.navigation__list--goods a {
+  color: #ffd180;
+}
+
 .navigation--footer a:hover,
 .navigation--footer a:focus {
-  text-decoration: underline;
+  border-bottom: 1px solid #ffffff;
+}
+
+.navigation__list--goods a:hover,
+.navigation__list--goods a:focus {
+  border-bottom: 1px solid #ffd180;
 }
 
 .navigation--footer a:active {
   opacity: 0.5;
-  text-decoration: none;
 }
 
 .navigation--footer .navigation__list {
@@ -318,10 +326,6 @@ input[type="radio"].visually-hidden {
 
 .navigation--footer .navigation__item {
   flex-grow: 0;
-}
-
-.navigation__list--goods a {
-  color: #ffd180;
 }
 
 .main-section-heade {
