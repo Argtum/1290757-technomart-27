@@ -59,38 +59,6 @@
     <main class="main-page">
       <div class="container">
         <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
-        <section class="main-slider">
-          <h2 class="visually-hidden">Типы предоставляемой продукции</h2>
-          <ul class="main-slider__list">
-            <li class="main-slider__item main-slider__item--current">
-              <img src="img/slide-image1.jpg" width="620" height="266" alt="Дрели">
-              <p class="main-slider__text main-slider__text--type">Дрели</p>
-              <p class="main-slider__text main-slider__text--tagline">Соседям на радость!</p>
-              <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
-              <button type="button" class="main-slider__nav-button button button--slide--left" aria-label="Вперёд">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
-                  <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/>
-                </svg>
-              </button>
-              <button type="button" class="main-slider__nav-button button button--slide--right" aria-label="Назад">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
-                  <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/>
-                </svg>
-              </button>
-            </li>
-
-            <li class="main-slider__item">
-              <img src="img/slide-image2.jpg" width="620" height="266" alt="Перфораторы">
-              <p class="main-slider__text main-slider__text--type">Перфораторы</p>
-              <p class="main-slider__text main-slider__text--tagline">Настоящие мужские игрушки</p>
-              <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
-              <button type="button" class="main-slider__nav-button button button--slide--left"
-                      aria-label="Вперёд">&lt;</button>
-              <button type="button" class="main-slider__nav-button button button--slide--right"
-                      aria-label="Назад">&gt;</button>
-            </li>
-          </ul>
-        </section>
 
         <section class="advantages">
           <h2 class="visually-hidden">Наши преймущества</h2>
@@ -111,14 +79,48 @@
               <a class="advantages__button button button--advantage" href="">Для стройки</a>
             </li>
 
-            <li class="advantages__item advantages__item--motivator">
-              <span class="advantages__text">Скидки 50%</span>
-              <a class="advantages__button button button--advantage" href="">На 350 товаров</a>
+            <li class="advantages__item main-slider">
+              <ul class="main-slider__list">
+                <li class="main-slider__item main-slider__item--current">
+                  <img src="img/slide-image1.jpg" width="620" height="266" alt="Дрели">
+                  <p class="main-slider__text main-slider__text--type">Дрели</p>
+                  <p class="main-slider__text main-slider__text--tagline">Соседям на радость!</p>
+                  <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
+                </li>
+
+                <li class="main-slider__item">
+                  <img src="img/slide-image2.jpg" width="620" height="266" alt="Перфораторы">
+                  <p class="main-slider__text main-slider__text--type">Перфораторы</p>
+                  <p class="main-slider__text main-slider__text--tagline">Настоящие мужские игрушки</p>
+                  <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
+                </li>
+              </ul>
+
+              <button type="button" class="main-slider__nav-button button button--slide--left" aria-label="Вперёд">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                  <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/>
+                </svg>
+              </button>
+              <button type="button" class="main-slider__nav-button button button--slide--right" aria-label="Назад">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                  <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/>
+                </svg>
+              </button>
+              <div class="main-slider__bullets">
+                <button type="button" class="button button--bullet button--bullet--current" aria-label="Первый слайд"></button>
+                <button type="button" class="button button--bullet" aria-label="Второй слайд"></button>
+              </div>
             </li>
 
-            <li class="advantages__item advantages__item--motivator">
-              <span class="advantages__text">Доставка</span>
-              <a class="advantages__button button button--advantage" href="">Бесплатно</a>
+            <li class="advantages__item-container">
+              <div class="advantages__item">
+                <span class="advantages__text">Скидки 50%</span>
+                <a class="advantages__button button button--advantage" href="">На 350 товаров</a>
+              </div>
+              <div class="advantages__item">
+                <span class="advantages__text">Доставка</span>
+                <a class="advantages__button button button--advantage" href="">Бесплатно</a>
+              </div>
             </li>
           </ul>
         </section>
@@ -237,51 +239,61 @@
         </section>
       </div>
 
-      <section class="services section">
+      <section class="services section section--service">
         <div class="container">
           <h2 class="section__title">Сервисы</h2>
-          <p class="section__text">
+          <p class="section__text section__text--service">
             Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <ul class="services__list">
-            <li class="services__item">
-              <div class="services__card services__card--current service-card">
-                <h3 class="service-card__title">Доставка</h3>
-                <p class="service-card__text">
-                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-                  заработаем,<br>
-                  поднимая его на ваш этаж!
-                </p>
-              </div>
-              <a href="" class="services__selector services__selector--current">Доставка</a>
-            </li>
+          <div class="services__container">
+            <ul class="services__list">
+              <li class="services__item services__item--current">
+                <div class="services__card services__card--current service-card">
+                  <h3 class="service-card__title">Доставка</h3>
+                  <p class="service-card__text">
+                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
+                    заработаем,<br>
+                    поднимая его на ваш этаж!
+                  </p>
+                </div>
+              </li>
 
-            <li class="services__item">
-              <div class="services__card service-card">
-                <h3 class="service-card__title">Гарантия</h3>
-                <p class="service-card__text">
-                  Если купленный у нас товар поломается или заискрит,<br>
-                  а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей
-                  гарантии. Мы обменяем сгоревший товар на новый.<br>
-                  Дом уж восстановите как-нибудь сами.
-                </p>
-              </div>
-              <a href="" class="services__selector">Гарантия</a>
-            </li>
+              <li class="services__item">
+                <div class="services__card service-card">
+                  <h3 class="service-card__title">Гарантия</h3>
+                  <p class="service-card__text">
+                    Если купленный у нас товар поломается или заискрит,<br>
+                    а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей
+                    гарантии. Мы обменяем сгоревший товар на новый.<br>
+                    Дом уж восстановите как-нибудь сами.
+                  </p>
+                </div>
+              </li>
 
-            <li class="services__item">
-              <div class="services__card service-card">
-                <h3 class="service-card__title">Кредит</h3>
-                <p class="service-card__text">
-                  Залезть в долговую яму стало проще!<br>
-                  Кредитные консультанты придут вам на помощь.
-                </p>
-                <a href="" class="service-card__button button button--main">Оправить заявку</a>
-              </div>
-              <a href="" class="services__selector">Кредит</a>
-            </li>
-          </ul>
+              <li class="services__item">
+                <div class="services__card service-card">
+                  <h3 class="service-card__title">Кредит</h3>
+                  <p class="service-card__text">
+                    Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.
+                  </p>
+                  <a href="" class="service-card__button button button--main">Оправить заявку</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="services__selector-list selector-list">
+              <li class="selector-list__item selector-list__item--current">
+                <a href="" class="selector-list__button">Доставка</a>
+              </li>
+              <li class="selector-list__item">
+                <a href="" class="selector-list__button">Гарантия</a>
+              </li>
+              <li class="selector-list__item">
+                <a href="" class="selector-list__button">Кредит</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
