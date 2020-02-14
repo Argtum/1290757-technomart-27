@@ -736,6 +736,16 @@ input[type="radio"].visually-hidden {
 
 .main-header__block {
   color: white;
+
+  position: relative;
+}
+
+.main-header__block svg {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+
+  opacity: 0.3;
 }
 
 .main-header__block--bookmarks:hover,
@@ -743,6 +753,18 @@ input[type="radio"].visually-hidden {
 .main-header__block--bookmarks:focus,
 .main-header__block--basket:focus {
   background-color: #212a3a;
+}
+
+.main-header__block--bookmarks:hover svg,
+.main-header__block--basket:hover svg,
+.main-header__block--bookmarks:focus svg,
+.main-header__block--basket:focus svg {
+  opacity: 1;
+}
+
+.main-header__block--bookmarks:active,
+.main-header__block--basket:active {
+  opacity: 0.5;
 }
 
 .main-header__block--checkout {
@@ -887,6 +909,7 @@ input[type="radio"].visually-hidden {
 
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .advantages__item:nth-child(3n) {
@@ -918,6 +941,19 @@ input[type="radio"].visually-hidden {
 
 .advantages__item-container .advantages__item:nth-child(2) {
   background-color: #ffc047;
+}
+
+.advantages__image {
+  width: 80px;
+  height: 80px;
+
+  position: absolute;
+  right: 25px;
+  top: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-slider {
