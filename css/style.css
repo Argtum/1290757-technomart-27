@@ -617,7 +617,7 @@ input[type="radio"].visually-hidden {
 }
 
 .section--service {
-  padding-bottom: 89px;
+  padding-bottom: 98px;
 }
 
 .section__title {
@@ -652,9 +652,34 @@ input[type="radio"].visually-hidden {
   width: 400px;
 }
 
+.service-card {
+  position: relative;
+}
+
+.service-card:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.service-card--delivery:before {
+  content: url("../img/delivery.png");
+}
+
+.service-card--warranty:before {
+  content: url("../img/guarantee.png");
+}
+
+.service-card--credit:before {
+  content: url("../img/credit.png");
+}
+
 .service-card__title {
   font-size: 36px;
   color: #32425c;
+  text-transform: uppercase;
+
+  margin: 0;
 }
 
 .service-card__text {
@@ -662,6 +687,31 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   line-height: 1.85;
   color: #000000;
+
+  margin-top: 23px;
+}
+
+.service-card__text--delivery {
+  width: 275px;
+}
+
+.service-card__text--warranty {
+  width: 375px;
+}
+
+.service-card__text--credit {
+  width: 280px;
+}
+
+.service-card__button {
+  text-align: center;
+
+  display: block;
+  width: 195px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 3px;
+  margin-top: 25px;
 }
 
 .form__fieldset {
@@ -859,17 +909,20 @@ input[type="radio"].visually-hidden {
 }
 
 .social {
+  width: 130px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 130px;
   align-items: center;
 }
 
 .selector-list {
   list-style: none;
-  margin: 0;
+
+  margin: 5px 0 0;
   padding-left: 0;
+
   display: flex;
   flex-direction: column;
   order: -1;
@@ -1317,7 +1370,7 @@ input[type="radio"].visually-hidden {
 
 .services__container {
   display: flex;
-  margin-top: 70px;
+  margin-top: 63px;
 }
 
 .services__list {
@@ -1325,6 +1378,7 @@ input[type="radio"].visually-hidden {
 
   margin: 0;
   padding-left: 80px;
+  width: 100%;
 }
 
 .services__card {
@@ -1600,7 +1654,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-goods {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .popular-producers {
