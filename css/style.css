@@ -62,6 +62,11 @@ img {
   width: 940px;
 }
 
+.container__modal {
+  margin: 0 auto;
+  width: 460px;
+}
+
 .container-wrapper {
   display: flex;
   justify-content: space-between;
@@ -78,7 +83,40 @@ img {
 }
 
 .modal {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  background-color: #ffffff;
+}
+
+.modal:before {
+  content: url("../img/icon-close.svg");
+
+  display: block;
+  width: 21px;
+  height: 21px;
+
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+
+.modal__footer {
+  background-color: #f4f4f4;
+}
+
+.modal--map {
   display: none;
+}
+
+.modal--write-us {
+  display: block;
+
+  width: 620px;
+  border-top: 7px solid #ee3643;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -393,6 +431,10 @@ input[type="radio"].visually-hidden {
 .button--bullet--current:before {
   content: "";
   display: none;
+}
+
+.button--full-size {
+  width: 100%;
 }
 
 .navigation--header {
@@ -714,6 +756,11 @@ input[type="radio"].visually-hidden {
   margin-top: 25px;
 }
 
+.form--write-us .modal__footer {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
 .form__fieldset {
   padding: 0;
   margin: 15px 0 0;
@@ -734,6 +781,44 @@ input[type="radio"].visually-hidden {
 .form__fieldset--producer .form__text,
 .form__fieldset--supply-type .form__text {
   padding-top: 8px;
+}
+
+.form__fieldset--write-us {
+  padding-top: 25px;
+  padding-bottom: 37px;
+  margin: 0;
+}
+
+.form__fieldset--write-us .container__modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset--write-us .form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset--write-us .form__field label {
+  font-size: 18px;
+}
+
+.form__fieldset--write-us .form__field input,
+.form__fieldset--write-us .form__field textarea {
+  margin-top: 13px;
+  padding: 10px 15px;
+  border: solid 2px #dee3e4;
+}
+
+.form__fieldset--write-us .form__field textarea {
+  resize: none;
+}
+
+.form__fieldset--write-us .form__field input::placeholder,
+.form__fieldset--write-us .form__field textarea::placeholder {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  color: #a9a9a9;
 }
 
 .form__field {
@@ -835,6 +920,15 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
+.form__field-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__field-wrapper input {
+  width: 220px;
+}
+
 .form__field--checked label:before {
   display: none;
 }
@@ -904,8 +998,12 @@ input[type="radio"].visually-hidden {
   fill: #ee3643;
 }
 
-.modal__close {
-  border: none;
+.form__button {
+  text-align: center;
+
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .social {

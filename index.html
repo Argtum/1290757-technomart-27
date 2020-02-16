@@ -478,34 +478,35 @@
       <h2 class="visually-hidden">Наше местоположение</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.218587316195!2d30.312790631577727!3d59.93862511774334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1580335393804!5m2!1sru!2sru"
               width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
-      <button type="button" class="modal__close" aria-label="закрыть"></button>
     </section>
 
     <section class="modal modal--write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form class="form form--write-us" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__fieldset">
-          <legend class="visually-hidden">Ваши контактные данные и текст письма</legend>
-          <ul class="form__fields-list">
-            <li>
-              <label for="write-us-login">Ваше имя:</label>
-              <input id="write-us-login" type="text" name="login" placeholder="Имя Фамилия">
-            </li>
-            <li>
-              <label for="write-us-email">Ваш e-mail:</label>
-              <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
-            </li>
-            <li>
-              <label for="write-us-message">Текст письма:</label>
-              <textarea id="write-us-message" name="message" rows="5" placeholder="В свободной форме"></textarea>
-            </li>
-          </ul>
-        </fieldset>
-        <div class="modal__footer">
-          <button class="form__button button button--main button--full-size" type="submit">Отправить</button>
-        </div>
-      </form>
-      <button type="button" class="modal__close" aria-label="закрыть"></button>
+        <form class="form form--write-us" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="form__fieldset form__fieldset--write-us">
+            <div class="container__modal">
+              <div class="form__field-wrapper">
+                <div class="form__field">
+                  <label for="write-us-login">Ваше имя:</label>
+                  <input id="write-us-login" type="text" name="login" placeholder="Имя Фамилия">
+                </div>
+                <div class="form__field">
+                  <label for="write-us-email">Ваш e-mail:</label>
+                  <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
+                </div>
+              </div>
+              <div class="form__field">
+                <label for="write-us-message">Текст письма:</label>
+                <textarea id="write-us-message" name="message" rows="5" placeholder="В свободной форме"></textarea>
+              </div>
+            </div>
+          </fieldset>
+          <div class="modal__footer">
+            <div class="container__modal">
+              <a class="form__button button button--main button--full-size" type="submit">Отправить</a>
+            </div>
+          </div>
+        </form>
     </section>
   </body>
 </html>
