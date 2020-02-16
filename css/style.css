@@ -104,19 +104,56 @@ img {
   right: 9px;
 }
 
+.modal__title {
+  font-weight: 400;
+  font-size: 30px;
+
+  margin: 0;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  padding-left: 100px;
+
+  position: relative;
+}
+
+.modal__title svg {
+  position: absolute;
+  left: 0;
+  top: 50px;
+
+  width: 66px;
+  height: 66px;
+}
+
 .modal__footer {
   background-color: #f4f4f4;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .modal--map {
   display: none;
 }
 
-.modal--write-us {
-  display: block;
+.modal--write-us,
+.modal--added-to-cart {
+  display: none;
 
   width: 620px;
   border-top: 7px solid #ee3643;
+}
+
+.modal__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__button {
+  text-align: center;
+  text-transform: uppercase;
+  width: 220px;
+
+  padding: 12px;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -148,7 +185,6 @@ input[type="radio"].visually-hidden {
 .button--white {
   background-color: #ffffff;
   color: #000000;
-  text-transform: capitalize;
 }
 
 .button--phone {
@@ -269,6 +305,7 @@ input[type="radio"].visually-hidden {
 
 .button--logout {
   font-size: 21px;
+  text-transform: capitalize;
 
   padding: 10px 65px 10px 45px;
   position: relative;
@@ -754,11 +791,6 @@ input[type="radio"].visually-hidden {
   padding-bottom: 12px;
   border-radius: 3px;
   margin-top: 25px;
-}
-
-.form--write-us .modal__footer {
-  padding-top: 35px;
-  padding-bottom: 35px;
 }
 
 .form__fieldset {
