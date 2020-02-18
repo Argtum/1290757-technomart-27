@@ -156,9 +156,7 @@ img {
   padding: 12px;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
   width: 1px;
@@ -180,6 +178,8 @@ input[type="radio"].visually-hidden {
   background-color: #ee3643;
   text-transform: uppercase;
   border-radius: 2px;
+
+  cursor: pointer;
 }
 
 .button--white {
@@ -831,23 +831,23 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
 }
 
-.form__fieldset--write-us .form__field label {
+.form__fieldset--write-us label {
   font-size: 18px;
 }
 
-.form__fieldset--write-us .form__field input,
-.form__fieldset--write-us .form__field textarea {
+.form__fieldset--write-us input,
+.form__fieldset--write-us textarea {
   margin-top: 13px;
   padding: 10px 15px;
   border: solid 2px #dee3e4;
 }
 
-.form__fieldset--write-us .form__field textarea {
+.form__fieldset--write-us textarea {
   resize: none;
 }
 
-.form__fieldset--write-us .form__field input::placeholder,
-.form__fieldset--write-us .form__field textarea::placeholder {
+.form__fieldset--write-us input::placeholder,
+.form__fieldset--write-us textarea::placeholder {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   color: #a9a9a9;
@@ -988,15 +988,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form--search {
-  position: relative;
-}
-
-.form--search svg {
-  position: absolute;
-  top: 17px;
-  left: 17px;
-
-  opacity: 0.3;
+  display: flex;
 }
 
 .form--search input {
@@ -1008,13 +1000,20 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
+.form--search:hover,
+.form--search:focus,
 .form--search:hover input,
 .form--search:focus input {
   background-color: #212a3a;
 }
 
-.form--search:active input {
+.form--search input:focus,
+.form--search input:focus + .form__button {
   background-color: #ffffff;
+}
+
+.form--search input:focus + .form__button path {
+  fill: #ee3643;
 }
 
 .form--search:active input::placeholder {
@@ -1031,11 +1030,25 @@ input[type="radio"].visually-hidden {
 }
 
 .form__button {
-  text-align: center;
+  background-color: transparent;
 
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  padding: 0;
+
+  position: relative;
+  order: -1;
+}
+
+.form__button svg {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 2px;
+
+  opacity: 0.3;
 }
 
 .social {
@@ -1141,8 +1154,8 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header__search-form input {
-  width: 270px;
-  padding: 16px 15px 11px 50px;
+  width: 224px;
+  padding: 16px 15px 11px 4px;
 }
 
 .main-header__user-navigation {
