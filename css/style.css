@@ -303,27 +303,44 @@ img {
   top: 15px;
 }
 
-.button--logout {
+.button--profile {
   font-size: 21px;
   text-transform: capitalize;
 
-  padding: 10px 65px 10px 45px;
+  padding: 10px 25px 10px 45px;
+  position: relative;
+}
+
+.button--profile svg {
+  position: absolute;
+}
+
+.button--profile .icon-logout {
+  right: 10px;
+  top: 15px;
+}
+
+.button--profile svg {
+  left: 15px;
+  top: 15px;
+}
+
+.button--logout {
+  width: 45px;
+  height: 45px;
+
+  display: block;
   position: relative;
 }
 
 .button--logout svg {
   position: absolute;
+
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.button--logout .icon-logout {
-  right: 10px;
-  top: 15px;
-}
-
-.button--logout .icon-user {
-  left: 10px;
-  top: 15px;
-}
 
 .button--login,
 .button--registration {
@@ -342,19 +359,22 @@ img {
 
 .button--login:hover path,
 .button--login:focus path,
+.button--profile:hover path,
+.button--profile:focus path,
 .button--logout:hover path,
 .button--logout:focus path {
   fill: #000000;
 }
 
 .button--login:active path,
+.button--profile:active path,
 .button--logout:active path {
   fill: #c5c5c5;
 }
 
 .button--login:active,
 .button--registration:active,
-.button--logout:active {
+.button--profile:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1032,9 +1052,6 @@ img {
 .form__button {
   background-color: transparent;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 47px;
   height: 47px;
   padding: 0;
@@ -1045,8 +1062,9 @@ img {
 
 .form__button svg {
   position: absolute;
-  margin-top: 2px;
-  margin-left: 2px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 
   opacity: 0.3;
 }
@@ -1286,6 +1304,10 @@ img {
 
 .main-header__authentication--logged {
   flex-direction: column;
+}
+
+.main-header__button-container {
+  display: flex;
 }
 
 .main-header__button {
