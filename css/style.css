@@ -92,12 +92,14 @@ img {
   background-color: #ffffff;
 }
 
-.modal:before {
-  content: url("../img/icon-close.svg");
-
-  display: block;
+.modal__close {
+  border: none;
   width: 21px;
   height: 21px;
+  padding: 0;
+
+  cursor: pointer;
+  background-color: transparent;
 
   position: absolute;
   top: 9px;
@@ -137,7 +139,7 @@ img {
 
 .modal--write-us,
 .modal--added-to-cart {
-  display: none;
+  display: block;
 
   width: 620px;
   border-top: 7px solid #ee3643;
