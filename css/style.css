@@ -139,7 +139,7 @@ img {
 
 .modal--write-us,
 .modal--added-to-cart {
-  display: block;
+  display: none;
 
   width: 620px;
   border-top: 7px solid #ee3643;
