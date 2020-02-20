@@ -83,13 +83,18 @@ img {
 }
 
 .modal {
-  position: fixed;
+  display: none;
 
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 
   background-color: #ffffff;
+}
+
+.modal--show {
+  display: block;
 }
 
 .modal__close {
@@ -133,14 +138,8 @@ img {
   padding-bottom: 35px;
 }
 
-.modal--map {
-  display: none;
-}
-
 .modal--write-us,
 .modal--added-to-cart {
-  display: none;
-
   width: 620px;
   border-top: 7px solid #ee3643;
 }
