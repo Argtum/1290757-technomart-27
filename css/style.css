@@ -615,8 +615,21 @@ img {
   position: relative;
 }
 
-.catalog-item--new .catalog-item__motivator {
-  display: block;
+.catalog-item--new::before {
+  content: "new";
+
+  background-color: #ee3643;
+  transform: rotate(45deg);
+
+  font-size: 14px;
+  line-height: 27px;
+  text-align: center;
+  color: #ffffff;
+
+  position: absolute;
+  right: -90px;
+  top: 5px;
+  width: 100%;
 }
 
 .catalog-item:hover,
@@ -1444,8 +1457,20 @@ img {
   overflow: hidden;
 }
 
-.advantages__item--motivator .advantages__motivator {
-  display: block;
+.advantages__item--motivator::before {
+  content: "new";
+
+  background-color: #ee3643;
+  transform: rotate(45deg);
+
+  font-size: 14px;
+  line-height: 27px;
+  text-align: center;
+
+  position: absolute;
+  right: -130px;
+  top: 5px;
+  width: 100%;
 }
 
 .advantages__item:nth-child(3n) {
@@ -1601,6 +1626,20 @@ img {
 .about-company__item a {
   font-size: 18px;
   color: #000000;
+
+  position: relative;
+}
+
+.about-company__item a::before {
+  content: "";
+
+  background-color: #ee3643;
+
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: -35px;
+  top: 10px;
 }
 
 .about-company__list {
@@ -1790,35 +1829,33 @@ img {
   display: flex;
 }
 
-.pagination__item {
+.pagination__item a {
   padding: 12px 15px;
   border: solid 1px #e5e5e5;
   border-radius: 3px;
+  display: block;
 }
 
-.pagination__item:not(:last-child) {
+.pagination__item:not(:last-child) a {
   margin-right: 10px;
 }
 
-.pagination__item:last-child {
+.pagination__item:last-child a {
   padding-right: 30px;
   padding-left: 30px;
 }
 
-.pagination__item:hover,
-.pagination__item:focus {
+.pagination__item a:hover,
+.pagination__item a:focus {
   border-color: #bdc6ca;
 }
 
-.pagination__item:active {
+.pagination__item a:active {
   border-color: #ee3643;
 }
 
-.pagination__item--current {
-  background-color: #ee3643;
-}
-
 .pagination__item--current a {
+  background-color: #ee3643;
   color: #ffffff;
 }
 
