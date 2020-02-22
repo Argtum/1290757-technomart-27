@@ -1,8 +1,7 @@
-var wrightUsButton = document.querySelector(".contacts__button");
-var wrightUsPopup = document.querySelector(".modal--write-us");
-
-var wrightUsClose = wrightUsPopup.querySelector(".modal__close");
-var wrightUsFormLogin = wrightUsPopup.querySelector("[name=login]");
+var wrightUsButton = document.querySelector(".contacts__button"),
+    wrightUsPopup = document.querySelector(".modal--write-us"),
+    wrightUsClose = wrightUsPopup.querySelector(".modal__close"),
+    wrightUsFormLogin = wrightUsPopup.querySelector("[name=login]");
 
 wrightUsButton.addEventListener("click", function (evt) {
   evt.preventDefault();

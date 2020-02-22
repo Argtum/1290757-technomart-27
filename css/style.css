@@ -109,6 +109,7 @@ img {
   position: absolute;
   top: 9px;
   right: 9px;
+  z-index: 10;
 }
 
 .modal__close::before,
@@ -177,6 +178,22 @@ img {
   width: 220px;
 
   padding: 12px;
+}
+
+.modal--map p {
+  margin: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.modal--map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -773,6 +790,7 @@ img {
 
 .section--service {
   padding-bottom: 98px;
+  overflow: hidden;
 }
 
 .section__title {
@@ -814,7 +832,7 @@ img {
 .service-card:before {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 25px;
 }
 
 .service-card--delivery:before {
