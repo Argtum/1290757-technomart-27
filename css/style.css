@@ -111,6 +111,28 @@ img {
   right: 9px;
 }
 
+.modal__close::before,
+.modal__close::after {
+  content: "";
+
+  position: absolute;
+  left: -2px;
+  top: 9px;
+
+  width: 25px;
+  height: 4px;
+
+  background-color: #ee3643;
+}
+
+.modal__close::before {
+  transform: rotate(45deg);
+}
+
+.modal__close::after {
+  transform: rotate(-45deg);
+}
+
 .modal__title {
   font-weight: 400;
   font-size: 30px;
