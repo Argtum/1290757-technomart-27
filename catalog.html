@@ -123,18 +123,26 @@
             <section class="filters">
               <h2 class="filters__title catalog-column__title catalog-column__title--filter">Фильтр:</h2>
               <form class="form form--filter" method="post" action="https://echo.htmlacademy.ru">
+
                 <fieldset class="form__fieldset form__fieldset--price">
                   <legend class="form__text">Цена:</legend>
-                  <div class="form__field form__field--range">
-                    <label class="visually-hidden" for="filter-price-range">Диапазон цен</label>
-                    <input type="range" id="filter-price-range" name="price-range" min="0" max="35000" step="1000">
+                  <div class="form__field form__field--range-control range-control">
+                    <div class="range-control__scale">
+                      <div class="range-control__bar"></div>
+                    </div>
+                    <div class="range-control__toggle range-control__toggle--min"></div>
+                    <div class="range-control__toggle range-control__toggle--max"></div>
                   </div>
                   <div class="form__field form__field--range-output">
-                    <label class="visually-hidden" for="filter-range-min-price">Цена от</label>
-                    <input id="filter-range-min-price" type="text" name="min-price" disabled>
+                    <label>
+                      <span class="visually-hidden">Цена от</span>
+                      <input type="number" name="min-price" value="0" disabled>
+                    </label>
                     <div>&#8211;</div>
-                    <label class="visually-hidden" for="filter-range-max-price">Цена до</label>
-                    <input id="filter-range-max-price" type="text" name="max-price" disabled>
+                    <label>
+                      <span class="visually-hidden">Цена до</span>
+                      <input type="number" name="max-price" value="30000" disabled>
+                    </label>
                   </div>
                 </fieldset>
 

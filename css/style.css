@@ -923,8 +923,10 @@ img {
   margin-top: 20px;
 }
 
-.form__field--range {
-  margin-top: 20px;
+.form__field--range-control {
+  width: 220px;
+  height: 80px;
+  background-color: #f7f3ec;
 }
 
 .form__field--range input {
@@ -937,14 +939,17 @@ img {
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .form__field--range-output input {
-  width: 95px;
-  height: 38px;
-
+  text-align: center;
+  background-color: #f7f3ec;
   border: none;
+
+  width: 95px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .form__fields-list {
@@ -1161,6 +1166,44 @@ img {
 .selector-list__item--current a:focus {
   background-color: #ffffff;
   color: #32425c;
+}
+
+.range-control {
+  padding: 39px 20px;
+  position: relative;
+}
+
+.range-control__scale {
+  width: 180px;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.range-control__bar {
+  width: 80%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-control__toggle {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-control__toggle--max {
+  left: 160px;
 }
 
 
