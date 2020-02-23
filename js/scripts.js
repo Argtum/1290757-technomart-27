@@ -1,26 +1,34 @@
-var wrightUsButton = document.querySelector(".contacts__button"),
+var showModalClass = "modal--show";
+
+
+
+var wrightUsOpenButton = document.querySelector(".contacts__button"),
     wrightUsPopup = document.querySelector(".modal--write-us");
 
 if (wrightUsPopup) {
-  var wrightUsClose = wrightUsPopup.querySelector(".modal__close"),
+  var wrightUsCloseButton = wrightUsPopup.querySelector(".modal__close"),
       wrightUsFormLogin = wrightUsPopup.querySelector("[name=login]");
 
-  showModal(wrightUsButton, wrightUsPopup, wrightUsFormLogin);
-  closeModal(wrightUsClose, wrightUsPopup);
+  showModalRegistrarEvent(wrightUsOpenButton, wrightUsPopup, wrightUsFormLogin);
+  closeModalRegistrarEvent(wrightUsCloseButton, wrightUsPopup);
 }
 
-var addedToCartButton = document.querySelectorAll(".button--item--filled"),
+
+
+var addedToCartOpenButton = document.querySelectorAll(".button--item--filled"),
     addedToCartPopup = document.querySelector(".modal--added-to-cart");
 
 if (addedToCartPopup) {
-  var addedToCartClose = addedToCartPopup.querySelector(".modal__close");
+  var addedToCartCloseButton = addedToCartPopup.querySelector(".modal__close");
 
-  addedToCartButton.forEach(function (button) {
-    showModal(button, addedToCartPopup);
+  addedToCartOpenButton.forEach(function (button) {
+    showModalRegistrarEvent(button, addedToCartPopup);
   });
 
-  closeModal(addedToCartClose, addedToCartPopup);
+  closeModalRegistrarEvent(addedToCartCloseButton, addedToCartPopup);
 }
+
+
 
 var mapButton = document.querySelector(".contacts__map"),
     mapPopup = document.querySelector(".modal--map");
@@ -28,31 +36,33 @@ var mapButton = document.querySelector(".contacts__map"),
 if (mapPopup) {
   var mapClose = mapPopup.querySelector(".modal__close");
 
-  showModal(mapButton, mapPopup);
-  closeModal(mapClose, mapPopup);
+  showModalRegistrarEvent(mapButton, mapPopup);
+  closeModalRegistrarEvent(mapClose, mapPopup);
 }
 
-function showModal(button, popup, focusField = []) {
+
+
+function showModalRegistrarEvent(button, popup, focusField = []) {
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.add("modal--show");
+    popup.classList.add(showModalClass);
     if (focusField.length !== 0) {
       focusField.focus();
     }
   });
 }
 
-function closeModal(button, popup) {
+function closeModalRegistrarEvent(button, popup) {
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.remove("modal--show");
+    popup.classList.remove(showModalClass);
   });
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (popup.classList.contains("modal--show")) {
-        popup.classList.remove("modal--show");
+      if (popup.classList.contains(showModalClass)) {
+        popup.classList.remove(showModalClass);
       }
     }
   });
