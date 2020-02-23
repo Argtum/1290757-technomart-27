@@ -1161,7 +1161,7 @@ img {
   align-items: center;
 }
 
-.selector-list {
+.services__selectors {
   list-style: none;
 
   margin: 5px 0 0;
@@ -1172,7 +1172,7 @@ img {
   order: -1;
 }
 
-.selector-list__item a {
+.services__selectors label {
   font-size: 21px;
   font-weight: bold;
 
@@ -1184,20 +1184,22 @@ img {
   padding: 17px 22px 20px 22px;
 }
 
-.selector-list__item--current a {
+.services__container input[value="service-1"]:checked ~ .services__selectors label[for="service-1"],
+.services__container input[value="service-2"]:checked ~ .services__selectors label[for="service-2"],
+.services__container input[value="service-3"]:checked ~ .services__selectors label[for="service-3"] {
   background-color: #ffffff;
   color: #32425c;
 }
 
-.selector-list__item a:hover,
-.selector-list__item a:focus {
+.services__container input[value="service-1"]:checked ~ .services__list .service-card--delivery,
+.services__container input[value="service-2"]:checked ~ .services__list .service-card--warranty,
+.services__container input[value="service-3"]:checked ~ .services__list .service-card--credit {
+  display: block;
+}
+
+.services__selectors label:hover,
+.services__selectors label:focus {
   background-color: #293449;
-}
-
-.selector-list__item--current a:hover,
-.selector-list__item--current a:focus {
-  background-color: #ffffff;
-  color: #32425c;
 }
 
 .range-control {
@@ -1721,6 +1723,10 @@ img {
   margin-top: 63px;
 }
 
+.services__container input {
+  display: none;
+}
+
 .services__list {
   list-style: none;
 
@@ -1731,10 +1737,7 @@ img {
 
 .services__card {
   display: none;
-}
-
-.services__item--current .services__card{
-  display: block;
+  min-height: 185px;
 }
 
 .about-company {

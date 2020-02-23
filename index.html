@@ -360,9 +360,19 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="services__container">
+            <input type="radio" id="service-1" name="toggle-service" value="service-1" checked>
+            <input type="radio" id="service-2" name="toggle-service" value="service-2">
+            <input type="radio" id="service-3" name="toggle-service" value="service-3">
+
+            <div class="services__selectors">
+              <label for="service-1">Доставка</label>
+              <label for="service-2">Гарантия</label>
+              <label for="service-3">Кредит</label>
+            </div>
+
             <ul class="services__list">
-              <li class="services__item services__item--current">
-                <div class="services__card service-card service-card--delivery service-card--current">
+              <li class="services__item">
+                <div class="services__card service-card service-card--delivery">
                   <h3 class="service-card__title">Доставка</h3>
                   <p class="service-card__text service-card__text--delivery">
                     Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
@@ -393,17 +403,6 @@
                   </p>
                   <a href="" class="service-card__button button button--main">Оправить заявку</a>
                 </div>
-              </li>
-            </ul>
-            <ul class="services__selector-list selector-list">
-              <li class="selector-list__item selector-list__item--current">
-                <a href="" class="selector-list__button">Доставка</a>
-              </li>
-              <li class="selector-list__item">
-                <a href="" class="selector-list__button">Гарантия</a>
-              </li>
-              <li class="selector-list__item">
-                <a href="" class="selector-list__button">Кредит</a>
               </li>
             </ul>
           </div>
