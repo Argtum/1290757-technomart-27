@@ -1164,7 +1164,7 @@ img {
 .services__selectors {
   list-style: none;
 
-  margin: 5px 0 0;
+  margin: 6px 0 0;
   padding-left: 0;
 
   display: flex;
@@ -1181,7 +1181,11 @@ img {
 
   display: block;
   width: 240px;
-  padding: 17px 22px 20px 22px;
+  padding: 18px 22px;
+
+  border-bottom: 1px solid #293449;
+  border-top: 1px solid #405069;
+  cursor: pointer;
 }
 
 .services__container input[value="service-1"]:checked ~ .services__selectors label[for="service-1"],
@@ -1189,6 +1193,8 @@ img {
 .services__container input[value="service-3"]:checked ~ .services__selectors label[for="service-3"] {
   background-color: #ffffff;
   color: #32425c;
+  border-bottom-color: #ffffff;
+  border-top-color: #ffffff;
 }
 
 .services__container input[value="service-1"]:checked ~ .services__list .service-card--delivery,
