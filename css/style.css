@@ -715,6 +715,7 @@ img {
 
   display: inline-block;
   width: 140px;
+  height: 40px;
   padding: 10px 10px 11px;
   border-radius: 3px;
   position: relative;
@@ -1659,10 +1660,10 @@ img {
 
 .main-slider__nav-button {
   position: absolute;
-
   top: 50%;
   transform: translateY(-50%);
 
+  background-color: transparent;
   z-index: 1;
 }
 
@@ -1866,6 +1867,10 @@ img {
   padding: 23px 0 22px;
 }
 
+.breadcrumbs__item a {
+  color: #000000;
+}
+
 .breadcrumbs__item:not(:last-child)::after {
   content: url("../img/icon-right-small.svg");
   width: 8px;
@@ -1959,9 +1964,11 @@ img {
 }
 
 .pagination__item a {
-  padding: 12px 15px;
   border: solid 1px #e5e5e5;
   border-radius: 3px;
+  color: #000000;
+
+  padding: 12px 15px;
   display: block;
 }
 
