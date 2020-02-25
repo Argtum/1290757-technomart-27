@@ -533,6 +533,11 @@ img {
   color: #ffffff;
 }
 
+.navigation--header .navigation__list {
+  padding-left: 20px;
+  padding-right: 22px;
+}
+
 .navigation--header a {
   display: block;
   padding: 20px 30px;
@@ -561,13 +566,10 @@ img {
 }
 
 .navigation--footer a:hover,
-.navigation--footer a:focus {
-  border-bottom: 1px solid #ffffff;
-}
-
+.navigation--footer a:focus,
 .navigation__list--goods a:hover,
-.navigation__list--goods a:focus {
-  border-bottom: 1px solid #ffd180;
+.navigation__list--goods a:focus{
+  text-decoration: underline;
 }
 
 .navigation--footer a:active {
@@ -618,11 +620,15 @@ img {
 
   display: flex;
   flex-direction: column;
+
+  position: relative;
 }
 
 .catalog-item--new {
   overflow: hidden;
   position: relative;
+
+  z-index: 1;
 }
 
 .catalog-item--new::before {
@@ -640,21 +646,14 @@ img {
   right: -90px;
   top: 5px;
   width: 100%;
+
+  z-index: 2;
 }
 
 .catalog-item:hover,
 .catalog-item:focus {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
-}
-
-.catalog-item:hover .catalog-item__image,
-.catalog-item:focus .catalog-item__image {
-  display: none;
-}
-
-.catalog-item:hover .catalog-item__button-block,
-.catalog-item:focus .catalog-item__button-block {
-  display: block;
+  border: 0;
 }
 
 .catalog-item__title {
@@ -678,14 +677,24 @@ img {
 
 .catalog-item__image {
   display: block;
-  order: -1;
 }
 
 .catalog-item__button-block {
-  order: -1;
-  margin: 42px 40px;
+  padding: 42px 40px;
 
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #ffffff;
+
+  opacity: 0;
+}
+
+.catalog-item:hover .catalog-item__button-block,
+.catalog-item:focus .catalog-item__button-block {
+  opacity: 1;
 }
 
 .catalog-item__price {
@@ -961,8 +970,9 @@ img {
   border: none;
 
   width: 95px;
-  padding-top: 10px;
+  padding-top: 8px;
   padding-bottom: 10px;
+  padding-left: 18px;
 }
 
 .form__fields-list {
@@ -1025,6 +1035,7 @@ img {
   border-left: 4px solid #c5c5c5;
   border-bottom: 4px solid #c5c5c5;
   transform: rotate(-45deg);
+  box-shadow: 1px 2px 0 #fff, inset 0 -2px 0 #fff;
 }
 
 .form__field input[type="radio"] ~ label::before {
@@ -1314,6 +1325,10 @@ img {
   display: block;
   width: 150px;
   padding: 16px 15px 10px 50px;
+  position: relative;
+
+  color: white;
+  word-wrap: break-word;
 }
 
 .main-header__block--bookmarks {
@@ -1322,12 +1337,6 @@ img {
 
 .main-header__block--checkout {
   padding-left: 22px;
-}
-
-.main-header__block {
-  color: white;
-
-  position: relative;
 }
 
 .main-header__block svg {
