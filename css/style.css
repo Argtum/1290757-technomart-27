@@ -1651,8 +1651,6 @@ img {
   position: relative;
   width: 620px;
   padding: 0;
-
-  overflow: hidden;
 }
 
 .main-slider__list {
@@ -1661,13 +1659,18 @@ img {
   margin: 0;
   padding-left: 0;
 
-  width: 200%;
+  position: relative;
 }
 
 .main-slider__item {
-  position: relative;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
-  float: left;
+.main-slider__item--current {
+  opacity: 1;
 }
 
 .main-slider__text {

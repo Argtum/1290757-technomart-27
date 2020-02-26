@@ -1,4 +1,6 @@
-var showModalClass = "modal--show";
+var showModalClass = "modal--show",
+    currentSlideClass = "main-slider__item--current",
+    currentSlideBulletClass = "button--bullet--current";
 
 
 
@@ -42,6 +44,20 @@ if (mapPopup) {
 
 
 
+var firstSlide = document.querySelector(".main-slider__item--first"),
+    secondSlide = document.querySelector(".main-slider__item--second"),
+    allSliders = document.querySelectorAll(".main-slider__item"),
+    firstSlideBullet = document.querySelector(".button--bullet--first"),
+    secondSlideBullet = document.querySelector(".button--bullet--second"),
+    allSlideBullet = document.querySelectorAll(".button--bullet"),
+    nextSlide = document.querySelector(".button--slide--right"),
+    prevSlide = document.querySelector(".button--slide--left");
+
+sliderControlRegisterEven(nextSlide, secondSlide, secondSlideBullet);
+sliderControlRegisterEven(prevSlide, firstSlide, firstSlideBullet);
+
+
+
 function showModal(button, popup, focusField = []) {
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -67,3 +83,39 @@ function closeModal(button, popup) {
     }
   });
 }
+
+function clearSelection (items, className) {
+  items.forEach(function (item) {
+    item.classList.remove(className);
+  });
+}
+
+function sliderControlRegisterEven(controlButton, slider, bulletButton) {
+  controlButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    if (!slider.classList.contains(currentSlideClass)) {
+      clearSelection(allSliders, currentSlideClass);
+      slider.classList.add(currentSlideClass);
+
+      clearSelection (allSlideBullet, currentSlideBulletClass);
+      bulletButton.classList.add(currentSlideBulletClass);
+    }
+  });
+}
+
+allSlideBullet.forEach(function (bulletButton) {
+  bulletButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    clearSelection (allSliders, currentSlideClass);
+    if (this.classList.contains("button--bullet--first")) {
+      firstSlide.classList.add(currentSlideClass);
+    } else {
+      secondSlide.classList.add(currentSlideClass);
+    }
+
+    clearSelection (allSlideBullet, currentSlideBulletClass);
+    this.classList.add(currentSlideBulletClass);
+  });
+});
