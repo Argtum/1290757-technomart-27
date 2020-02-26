@@ -9,8 +9,8 @@ if (wrightUsPopup) {
   var wrightUsCloseButton = wrightUsPopup.querySelector(".modal__close"),
       wrightUsFormLogin = wrightUsPopup.querySelector("[name=login]");
 
-  showModalRegistrarEvent(wrightUsOpenButton, wrightUsPopup, wrightUsFormLogin);
-  closeModalRegistrarEvent(wrightUsCloseButton, wrightUsPopup);
+  showModal(wrightUsOpenButton, wrightUsPopup, wrightUsFormLogin);
+  closeModal(wrightUsCloseButton, wrightUsPopup);
 }
 
 
@@ -22,10 +22,10 @@ if (addedToCartPopup) {
   var addedToCartCloseButton = addedToCartPopup.querySelector(".modal__close");
 
   addedToCartOpenButton.forEach(function (button) {
-    showModalRegistrarEvent(button, addedToCartPopup);
+    showModal(button, addedToCartPopup);
   });
 
-  closeModalRegistrarEvent(addedToCartCloseButton, addedToCartPopup);
+  closeModal(addedToCartCloseButton, addedToCartPopup);
 }
 
 
@@ -36,13 +36,13 @@ var mapButton = document.querySelector(".contacts__map"),
 if (mapPopup) {
   var mapClose = mapPopup.querySelector(".modal__close");
 
-  showModalRegistrarEvent(mapButton, mapPopup);
-  closeModalRegistrarEvent(mapClose, mapPopup);
+  showModal(mapButton, mapPopup);
+  closeModal(mapClose, mapPopup);
 }
 
 
 
-function showModalRegistrarEvent(button, popup, focusField = []) {
+function showModal(button, popup, focusField = []) {
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add(showModalClass);
@@ -52,7 +52,7 @@ function showModalRegistrarEvent(button, popup, focusField = []) {
   });
 }
 
-function closeModalRegistrarEvent(button, popup) {
+function closeModal(button, popup) {
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove(showModalClass);

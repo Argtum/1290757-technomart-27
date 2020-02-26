@@ -1213,6 +1213,16 @@ img {
   display: flex;
   flex-direction: column;
   order: -1;
+
+  position: relative;
+}
+
+.selector-list::after {
+  content: url("../img/shadow.png");
+
+  position: absolute;
+  top: -44px;
+  right: 0;
 }
 
 .selector-list__item a {
