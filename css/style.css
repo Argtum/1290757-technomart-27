@@ -502,6 +502,37 @@ img {
   background-color: #ffffff;
 }
 
+.button--bullet {
+  width: 10px;
+  height: 10px;
+
+  background-color: #ffffff;
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+}
+
+.button--bullet:before {
+  content: "";
+  background-color: #ee3643;
+  border-radius: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.button--bullet--current:before {
+  content: "";
+  display: none;
+}
+
+
 .button--full-size {
   width: 100%;
 }
@@ -1173,7 +1204,7 @@ img {
   align-items: center;
 }
 
-.services__selectors {
+.selector-list {
   list-style: none;
 
   margin: 6px 0 0;
@@ -1184,7 +1215,7 @@ img {
   order: -1;
 }
 
-.services__selectors label {
+.selector-list__item a {
   font-size: 21px;
   font-weight: bold;
 
@@ -1200,24 +1231,24 @@ img {
   cursor: pointer;
 }
 
-.services__container input[value="service-1"]:checked ~ .services__selectors label[for="service-1"],
-.services__container input[value="service-2"]:checked ~ .services__selectors label[for="service-2"],
-.services__container input[value="service-3"]:checked ~ .services__selectors label[for="service-3"] {
+.selector-list__item--current a {
   background-color: #ffffff;
   color: #32425c;
   border-bottom-color: #ffffff;
   border-top-color: #ffffff;
 }
 
-.services__container input[value="service-1"]:checked ~ .services__list .service-card--delivery,
-.services__container input[value="service-2"]:checked ~ .services__list .service-card--warranty,
-.services__container input[value="service-3"]:checked ~ .services__list .service-card--credit {
-  display: block;
+.selector-list__item a:hover,
+.selector-list__item a:focus {
+  background-color: #293449;
+  border-bottom-color: #ffffff;
+  border-top-color: #ffffff;
 }
 
-.services__selectors label:hover,
-.services__selectors label:focus {
-  background-color: #293449;
+.selector-list__item--current a:hover,
+.selector-list__item--current a:focus {
+  background-color: #ffffff;
+  color: #32425c;
 }
 
 .range-control {
@@ -1257,11 +1288,6 @@ img {
 .range-control__toggle--max {
   left: 160px;
 }
-
-
-
-
-
 
 .main-header__container {
   font-size: 17px;
@@ -1717,19 +1743,6 @@ img {
   top: 2px;
 }
 
-.main-slider input[value="slide-1"]:checked ~ .main-slider__bullets label[for="slide-1"]::before,
-.main-slider input[value="slide-2"]:checked ~ .main-slider__bullets label[for="slide-2"]::before {
-  display: none;
-}
-
-.main-slider input[value="slide-1"]:checked ~ .main-slider__list {
-  transform: translate(0);
-}
-
-.main-slider input[value="slide-2"]:checked ~ .main-slider__list {
-  transform: translate(-620px);
-}
-
 .services {
   background-color: #f4f7f9;
 }
@@ -1753,7 +1766,11 @@ img {
 
 .services__card {
   display: none;
-  min-height: 185px;
+}
+
+.services__item--current .services__card {
+  display: block;
+
 }
 
 .about-company {

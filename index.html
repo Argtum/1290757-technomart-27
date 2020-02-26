@@ -129,25 +129,8 @@
             </li>
 
             <li class="advantages__item main-slider">
-              <input type="radio" id="slide-1" name="toggle-slide" value="slide-1" checked>
-              <input type="radio" id="slide-2" name="toggle-slide" value="slide-2">
-              <button type="button" class="main-slider__nav-button button button--slide--left" aria-label="Вперёд">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
-                  <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/>
-                </svg>
-              </button>
-              <button type="button" class="main-slider__nav-button button button--slide--right" aria-label="Назад">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
-                  <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/>
-                </svg>
-              </button>
-              <div class="main-slider__bullets">
-                <label for="slide-1"></label>
-                <label for="slide-2"></label>
-              </div>
-
               <ul class="main-slider__list">
-                <li class="main-slider__item">
+                <li class="main-slider__item main-slider__item--current">
                   <img src="img/slide-image1.jpg" width="620" height="266" alt="Дрели">
                   <p class="main-slider__text main-slider__text--type">Дрели</p>
                   <p class="main-slider__text main-slider__text--tagline">Соседям на радость!</p>
@@ -161,6 +144,21 @@
                   <a class="main-slider__button button button--main" href="catalog.html">Открыть каталог</a>
                 </li>
               </ul>
+
+              <button type="button" class="main-slider__nav-button button button--slide--left" aria-label="Вперёд">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                  <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/>
+                </svg>
+              </button>
+              <button type="button" class="main-slider__nav-button button button--slide--right" aria-label="Назад">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                  <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/>
+                </svg>
+              </button>
+              <div class="main-slider__bullets">
+                <button type="button" class="button button--bullet button--bullet--current" aria-label="Первый слайд"></button>
+                <button type="button" class="button button--bullet" aria-label="Второй слайд"></button>
+              </div>
             </li>
 
             <li class="advantages__item-container">
@@ -360,19 +358,9 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="services__container">
-            <input type="radio" id="service-1" name="toggle-service" value="service-1" checked>
-            <input type="radio" id="service-2" name="toggle-service" value="service-2">
-            <input type="radio" id="service-3" name="toggle-service" value="service-3">
-
-            <div class="services__selectors">
-              <label for="service-1">Доставка</label>
-              <label for="service-2">Гарантия</label>
-              <label for="service-3">Кредит</label>
-            </div>
-
             <ul class="services__list">
-              <li class="services__item">
-                <div class="services__card service-card service-card--delivery">
+              <li class="services__item services__item--current">
+                <div class="services__card service-card service-card--delivery service-card--current">
                   <h3 class="service-card__title">Доставка</h3>
                   <p class="service-card__text service-card__text--delivery">
                     Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
@@ -403,6 +391,17 @@
                   </p>
                   <a href="" class="service-card__button button button--main">Оправить заявку</a>
                 </div>
+              </li>
+            </ul>
+            <ul class="services__selector-list selector-list">
+              <li class="selector-list__item selector-list__item--current">
+                <a href="" class="selector-list__button">Доставка</a>
+              </li>
+              <li class="selector-list__item">
+                <a href="" class="selector-list__button">Гарантия</a>
+              </li>
+              <li class="selector-list__item">
+                <a href="" class="selector-list__button">Кредит</a>
               </li>
             </ul>
           </div>
