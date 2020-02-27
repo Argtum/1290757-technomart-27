@@ -65,8 +65,8 @@ if (mapPopup) {
 var firstSlide = document.querySelector(".main-slider__item--first"),
     secondSlide = document.querySelector(".main-slider__item--second"),
     allSliders = document.querySelectorAll(".main-slider__item"),
-    firstSlideBulvar = document.querySelector(".button--bullet--first"),
-    secondSlideBulvar = document.querySelector(".button--bullet--second"),
+    firstSlideBullet = document.querySelector(".button--bullet--first"),
+    secondSlideBullet = document.querySelector(".button--bullet--second"),
     allSlideBullets = document.querySelectorAll(".button--bullet"),
     nextSlide = document.querySelector(".button--slide--right"),
     prevSlide = document.querySelector(".button--slide--left");
