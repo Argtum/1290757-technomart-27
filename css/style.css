@@ -396,7 +396,7 @@ img {
   font-size: 21px;
   text-transform: capitalize;
 
-  padding: 10px 25px 10px 45px;
+  padding: 9px 25px 9px 45px;
   position: relative;
 }
 
@@ -417,6 +417,8 @@ img {
 .button--logout {
   width: 45px;
   height: 45px;
+
+  margin-left: -1px;
 
   display: block;
   position: relative;
@@ -501,7 +503,7 @@ img {
 .button--item--filled {
   background-color: #63a63e;
 
-  padding: 13px 10px 9px 40px;
+  padding: 13px 10px 9px 20px;
   box-shadow: inset 0 -3px 0 0 #367315;
 
   position: relative;
@@ -535,7 +537,7 @@ img {
 
   border: 3px solid #63a63e;
   margin-top: 10px;
-  padding: 8px;
+  padding: 8px 8px 7px;
 }
 
 .button--item--no-filled:hover,
@@ -627,8 +629,7 @@ img {
 }
 
 .navigation--header .navigation__item:active {
-  background-color: #1d2739;
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
 }
 
 .navigation--footer {
@@ -652,7 +653,7 @@ img {
 
 .navigation--footer a:active {
   opacity: 0.5;
-  border-bottom: none;
+  text-decoration: none;
 }
 
 .navigation--footer .navigation__list {
@@ -1152,9 +1153,32 @@ img {
   border-radius: 50%;
 }
 
+.form__field input[type="checkbox"]:hover ~ label::before,
+.form__field input[type="checkbox"]:focus ~ label::before,
+.form__field input[type="radio"]:hover ~ label::before,
+.form__field input[type="radio"]:focus ~ label::before {
+  border-color: #b5b5b5;
+}
+
+.form__field input[type="checkbox"]:hover ~ label::after,
+.form__field input[type="checkbox"]:focus ~ label::after {
+  border-left-color: #b5b5b5;
+  border-bottom-color: #b5b5b5;
+}
+
+.form__field input[type="radio"]:hover ~ label::after,
+.form__field input[type="radio"]:focus ~ label::after {
+  background-color: #b5b5b5;
+}
+
 .form__field input[type="checkbox"]:checked ~ label::after,
 .form__field input[type="radio"]:checked ~ label::after {
   display: block;
+}
+
+.form__field input[type="checkbox"]:active ~ label,
+.form__field input[type="radio"]:active ~ label {
+  opacity: 0.4;
 }
 
 .form__field-wrapper {
@@ -1230,7 +1254,6 @@ img {
   background-color: transparent;
 
   width: 47px;
-  height: 47px;
   padding: 0;
 
   position: relative;
@@ -1542,17 +1565,17 @@ img {
 
 .main-header__button {
   display: block;
+  border: none;
 }
 
 .main-header__user-menu {
   font-size: 16px;
   color: #32425c;
-  text-decoration: underline;
   list-style: none;
 
   display: flex;
   padding-left: 20px;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-bottom: 0;
 }
 
@@ -1575,6 +1598,7 @@ img {
 
 .user-menu__item a {
   color: #32425c;
+  text-decoration: underline;
 }
 
 .user-menu__item:not(:first-child)::before {
@@ -1598,7 +1622,8 @@ img {
 }
 
 .user-menu__item:active a {
-  color: rgba(50, 66, 92, 0.3)
+  color: #32425c;
+  opacity: 0.3;
 }
 
 
@@ -1660,15 +1685,15 @@ img {
   margin-right: 0;
 }
 
-.advantages__item:nth-child(1) {
+.advantages__item--materials {
   background-color: #ffbf47;
 }
 
-.advantages__item:nth-child(2) {
+.advantages__item--tool {
   background-color: #3bbce3;
 }
 
-.advantages__item:nth-child(3) {
+.advantages__item--equipment {
   background-color: #dc91d8;
 }
 
@@ -1679,11 +1704,11 @@ img {
   width: 300px;
 }
 
-.advantages__item-container .advantages__item:nth-child(1) {
+.advantages__item--discounts {
   background-color: #8ed78f;
 }
 
-.advantages__item-container .advantages__item:nth-child(2) {
+.advantages__item--delivery {
   background-color: #ffc047;
 }
 
@@ -1725,14 +1750,14 @@ img {
 }
 
 .main-slider__item {
-  opacity: 0;
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
 }
 
 .main-slider__item--current {
-  opacity: 1;
+  display: block;
 }
 
 .main-slider__text {
@@ -2266,10 +2291,10 @@ img {
 
 .main-footer__link:hover,
 .main-footer__link:focus {
-  border-bottom: 1px solid #ffd180;
+  text-decoration: underline;
 }
 
 .main-footer__link:active {
   color: #ee3643;
-  border-bottom: none;
+  text-decoration: none;
 }

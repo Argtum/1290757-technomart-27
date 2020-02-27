@@ -1,3 +1,13 @@
+if ('NodeList' in window && !NodeList.prototype.forEach) {
+  console.info('polyfill for IE11');
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
+}
+
 var showModalClass = "modal--show",
     errorModalClass = "modal--error",
     currentSlideClass = "main-slider__item--current",
@@ -17,7 +27,7 @@ if (wrightUsPopup) {
       wrightUsFormEmailField = wrightUsPopup.querySelector("[name=email]"),
       wrightUsFormMessageField = wrightUsPopup.querySelector("[name=message]");
 
-  showModal(wrightUsOpenButton, wrightUsPopup, wrightUsFormLoginField);
+  showModal(wrightUsOpenButton, wrightUsPopup);
   closeModal(wrightUsCloseButton, wrightUsPopup);
 
   wrightUsForm.addEventListener("submit", function (evt) {
@@ -92,13 +102,10 @@ if (deliverySlide) {
 
 
 
-function showModal(button, popup, focusField = []) {
+function showModal(button, popup) {
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add(showModalClass);
-    if (focusField.length !== 0) {
-      focusField.focus();
-    }
   });
 }
 

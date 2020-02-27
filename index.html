@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header">
@@ -90,7 +90,7 @@
         <section class="advantages">
           <h2 class="visually-hidden">Наши преймущества</h2>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--motivator">
+            <li class="advantages__item advantages__item--materials advantages__item--motivator">
               <span class="advantages__text">Материалы</span>
               <div class="advantages__image">
                 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="65" viewBox="0 0 44 65">
@@ -103,7 +103,7 @@
               <a class="advantages__button button button--advantage" href="">На любой вкус</a>
             </li>
 
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--tool">
               <span class="advantages__text">Инструмент</span>
               <div class="advantages__image">
                 <svg xmlns="http://www.w3.org/2000/svg" width="75" height="61" viewBox="0 0 75 61">
@@ -115,7 +115,7 @@
               <a class="advantages__button button button--advantage" href="">На все случаи</a>
             </li>
 
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--equipment">
               <span class="advantages__text">Техника</span>
               <div class="advantages__image">
                 <svg xmlns="http://www.w3.org/2000/svg" width="78" height="62" viewBox="0 0 78 62">
@@ -145,12 +145,14 @@
                 </li>
               </ul>
 
-              <button type="button" class="main-slider__nav-button button button--slide--left" aria-label="Вперёд">
+              <button type="button" class="main-slider__nav-button button button--slide--left"
+                      aria-label="Следующий слайд">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
                   <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/>
                 </svg>
               </button>
-              <button type="button" class="main-slider__nav-button button button--slide--right" aria-label="Назад">
+              <button type="button" class="main-slider__nav-button button button--slide--right"
+                      aria-label="Предидущий слайд">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
                   <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/>
                 </svg>
@@ -164,7 +166,7 @@
             </li>
 
             <li class="advantages__item-container">
-              <div class="advantages__item">
+              <div class="advantages__item advantages__item--discounts">
                 <span class="advantages__text">Скидки 50%</span>
                 <div class="advantages__image">
                   <svg xmlns="http://www.w3.org/2000/svg" width="59" height="72" viewBox="0 0 59 72">
@@ -178,7 +180,7 @@
                 </div>
                 <a class="advantages__button button button--advantage" href="">На 350 товаров</a>
               </div>
-              <div class="advantages__item">
+              <div class="advantages__item advantages__item--delivery">
                 <span class="advantages__text">Доставка</span>
                 <div class="advantages__image">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="63" viewBox="0 0 78 63">
@@ -208,7 +210,7 @@
                 <h3>Перфоратор <span>Bosch bfg 9000</span></h3>
               </a>
               <div class="catalog-item__button-block">
-                <a class="catalog-item__button button button--item--filled" href="">
+                <a class="catalog-item__button button button--item--filled" href="addToCartForm.html">
                   Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5"/>
@@ -231,7 +233,7 @@
                 <h3>Перфоратор <span>Bosch bfg 3000</span></h3>
               </a>
               <div class="catalog-item__button-block">
-                <a class="catalog-item__button button button--item--filled" href="">
+                <a class="catalog-item__button button button--item--filled" href="addToCartForm.html">
                   Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5"/>
@@ -254,7 +256,7 @@
                 <h3>Перфоратор <span>Bosch bfg 6000</span></h3>
               </a>
               <div class="catalog-item__button-block">
-                <a class="catalog-item__button button button--item--filled" href="">
+                <a class="catalog-item__button button button--item--filled" href="addToCartForm.html">
                   Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5"/>
@@ -277,7 +279,7 @@
                 <h3>Перфоратор <span>Bosch bfg 2000</span></h3>
               </a>
               <div class="catalog-item__button-block">
-                <a class="catalog-item__button button button--item--filled" href="">
+                <a class="catalog-item__button button button--item--filled" href="addToCartForm.html">
                   Купить
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5"/>
@@ -435,10 +437,10 @@
             <p class="section__text section__text--contacts">
               Вы можете забрать товар сами, заехав в наш офис:
             </p>
-            <a href="" class="contacts__map">
+            <a href="img/map-big.jpg" class="contacts__map">
               <img src="img/map.jpg" width="300" height="158" alt="Местоположене магазина на карте">
             </a>
-            <a class="contacts__button button button--main button--full-size" href="">Заблудились? Напишите нам!</a>
+            <a class="contacts__button button button--main button--full-size" href="writeUsForm.html">Заблудились? Напишите нам!</a>
           </section>
         </div>
       </div>
@@ -563,6 +565,6 @@
         <button type="button" class="modal__close" aria-label="закрыть"></button>
     </section>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
