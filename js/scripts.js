@@ -1,14 +1,16 @@
-var showModalClass = "modal--show",
+let showModalClass = "modal--show",
     currentSlideClass = "main-slider__item--current",
-    currentSlideBulletClass = "button--bullet--current";
+    currentSlideBulletClass = "button--bullet--current",
+    currentServiceSlideClass = "services__item--current",
+    currentServiceSlideButtonClass = "selector-list__item--current";
 
 
 
-var wrightUsOpenButton = document.querySelector(".contacts__button"),
+let wrightUsOpenButton = document.querySelector(".contacts__button"),
     wrightUsPopup = document.querySelector(".modal--write-us");
 
 if (wrightUsPopup) {
-  var wrightUsCloseButton = wrightUsPopup.querySelector(".modal__close"),
+  let wrightUsCloseButton = wrightUsPopup.querySelector(".modal__close"),
       wrightUsFormLogin = wrightUsPopup.querySelector("[name=login]");
 
   showModal(wrightUsOpenButton, wrightUsPopup, wrightUsFormLogin);
@@ -17,11 +19,11 @@ if (wrightUsPopup) {
 
 
 
-var addedToCartOpenButton = document.querySelectorAll(".button--item--filled"),
+let addedToCartOpenButton = document.querySelectorAll(".button--item--filled"),
     addedToCartPopup = document.querySelector(".modal--added-to-cart");
 
 if (addedToCartPopup) {
-  var addedToCartCloseButton = addedToCartPopup.querySelector(".modal__close");
+  let addedToCartCloseButton = addedToCartPopup.querySelector(".modal__close");
 
   addedToCartOpenButton.forEach(function (button) {
     showModal(button, addedToCartPopup);
@@ -32,11 +34,11 @@ if (addedToCartPopup) {
 
 
 
-var mapButton = document.querySelector(".contacts__map"),
+let mapButton = document.querySelector(".contacts__map"),
     mapPopup = document.querySelector(".modal--map");
 
 if (mapPopup) {
-  var mapClose = mapPopup.querySelector(".modal__close");
+  let mapClose = mapPopup.querySelector(".modal__close");
 
   showModal(mapButton, mapPopup);
   closeModal(mapClose, mapPopup);
@@ -44,17 +46,36 @@ if (mapPopup) {
 
 
 
-var firstSlide = document.querySelector(".main-slider__item--first"),
+let firstSlide = document.querySelector(".main-slider__item--first"),
     secondSlide = document.querySelector(".main-slider__item--second"),
     allSliders = document.querySelectorAll(".main-slider__item"),
     firstSlideBullet = document.querySelector(".button--bullet--first"),
     secondSlideBullet = document.querySelector(".button--bullet--second"),
-    allSlideBullet = document.querySelectorAll(".button--bullet"),
+    allSlideBullets = document.querySelectorAll(".button--bullet"),
     nextSlide = document.querySelector(".button--slide--right"),
     prevSlide = document.querySelector(".button--slide--left");
 
-sliderControlRegisterEven(nextSlide, secondSlide, secondSlideBullet);
-sliderControlRegisterEven(prevSlide, firstSlide, firstSlideBullet);
+if (firstSlide) {
+  sliderControlRegistrarEven(nextSlide, secondSlide, secondSlideBullet);
+  sliderControlRegistrarEven(prevSlide, firstSlide, firstSlideBullet);
+}
+
+
+
+let deliverySlide = document.querySelector(".service__item--delivery"),
+    warrantySlide = document.querySelector(".service__item--warranty"),
+    creditSlide = document.querySelector(".service__item--credit"),
+    allServiceSliders = document.querySelectorAll(".services__item"),
+    deliverySlideButton = document.querySelector(".selector-list__item--delivery"),
+    warrantySlideButton = document.querySelector(".selector-list__item--warranty"),
+    creditSlideButton = document.querySelector(".selector-list__item--credit"),
+    allServiceSlidersButtons = document.querySelectorAll(".selector-list__item");
+
+if (deliverySlide) {
+  toggleServiceSlider(deliverySlideButton, deliverySlide);
+  toggleServiceSlider(warrantySlideButton, warrantySlide);
+  toggleServiceSlider(creditSlideButton, creditSlide);
+}
 
 
 
@@ -90,7 +111,7 @@ function clearSelection (items, className) {
   });
 }
 
-function sliderControlRegisterEven(controlButton, slider, bulletButton) {
+function sliderControlRegistrarEven(controlButton, slider, bulletButton) {
   controlButton.addEventListener("click", function (evt) {
     evt.preventDefault();
 
@@ -98,13 +119,13 @@ function sliderControlRegisterEven(controlButton, slider, bulletButton) {
       clearSelection(allSliders, currentSlideClass);
       slider.classList.add(currentSlideClass);
 
-      clearSelection (allSlideBullet, currentSlideBulletClass);
+      clearSelection (allSlideBullets, currentSlideBulletClass);
       bulletButton.classList.add(currentSlideBulletClass);
     }
   });
 }
 
-allSlideBullet.forEach(function (bulletButton) {
+allSlideBullets.forEach(function (bulletButton) {
   bulletButton.addEventListener("click", function (evt) {
     evt.preventDefault();
 
@@ -115,7 +136,19 @@ allSlideBullet.forEach(function (bulletButton) {
       secondSlide.classList.add(currentSlideClass);
     }
 
-    clearSelection (allSlideBullet, currentSlideBulletClass);
+    clearSelection (allSlideBullets, currentSlideBulletClass);
     this.classList.add(currentSlideBulletClass);
   });
 });
+
+function toggleServiceSlider(sliderButton, slide) {
+  sliderButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    clearSelection (allServiceSliders, currentServiceSlideClass);
+    slide.classList.add(currentServiceSlideClass);
+
+    clearSelection (allServiceSlidersButtons, currentServiceSlideButtonClass);
+    sliderButton.classList.add(currentServiceSlideButtonClass);
+  });
+}
