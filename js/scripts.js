@@ -1,4 +1,5 @@
-let showModalClass = "modal--show",
+var showModalClass = "modal--show",
+    errorModalClass = "modal--error",
     currentSlideClass = "main-slider__item--current",
     currentSlideBulletClass = "button--bullet--current",
     currentServiceSlideClass = "services__item--current",
@@ -6,24 +7,39 @@ let showModalClass = "modal--show",
 
 
 
-let wrightUsOpenButton = document.querySelector(".contacts__button"),
+var wrightUsOpenButton = document.querySelector(".contacts__button"),
     wrightUsPopup = document.querySelector(".modal--write-us");
 
 if (wrightUsPopup) {
-  let wrightUsCloseButton = wrightUsPopup.querySelector(".modal__close"),
-      wrightUsFormLogin = wrightUsPopup.querySelector("[name=login]");
+  var wrightUsCloseButton = wrightUsPopup.querySelector(".modal__close"),
+      wrightUsForm = wrightUsPopup.querySelector("form"),
+      wrightUsFormLoginField = wrightUsPopup.querySelector("[name=login]"),
+      wrightUsFormEmailField = wrightUsPopup.querySelector("[name=email]"),
+      wrightUsFormMessageField = wrightUsPopup.querySelector("[name=message]");
 
-  showModal(wrightUsOpenButton, wrightUsPopup, wrightUsFormLogin);
+  showModal(wrightUsOpenButton, wrightUsPopup, wrightUsFormLoginField);
   closeModal(wrightUsCloseButton, wrightUsPopup);
 }
 
 
 
-let addedToCartOpenButton = document.querySelectorAll(".button--item--filled"),
+wrightUsForm.addEventListener("submit", function (evt) {
+  if (!wrightUsFormLoginField.value || !wrightUsFormEmailField.value || !wrightUsFormMessageField.value) {
+    evt.preventDefault();
+    wrightUsPopup.classList.remove(errorModalClass);
+    wrightUsPopup.offsetWidth = wrightUsPopup.offsetWidth;
+    wrightUsPopup.classList.add(errorModalClass);
+  }
+});
+
+
+
+
+var addedToCartOpenButton = document.querySelectorAll(".button--item--filled"),
     addedToCartPopup = document.querySelector(".modal--added-to-cart");
 
 if (addedToCartPopup) {
-  let addedToCartCloseButton = addedToCartPopup.querySelector(".modal__close");
+  var addedToCartCloseButton = addedToCartPopup.querySelector(".modal__close");
 
   addedToCartOpenButton.forEach(function (button) {
     showModal(button, addedToCartPopup);
@@ -34,11 +50,11 @@ if (addedToCartPopup) {
 
 
 
-let mapButton = document.querySelector(".contacts__map"),
+var mapButton = document.querySelector(".contacts__map"),
     mapPopup = document.querySelector(".modal--map");
 
 if (mapPopup) {
-  let mapClose = mapPopup.querySelector(".modal__close");
+  var mapClose = mapPopup.querySelector(".modal__close");
 
   showModal(mapButton, mapPopup);
   closeModal(mapClose, mapPopup);
@@ -46,11 +62,11 @@ if (mapPopup) {
 
 
 
-let firstSlide = document.querySelector(".main-slider__item--first"),
+var firstSlide = document.querySelector(".main-slider__item--first"),
     secondSlide = document.querySelector(".main-slider__item--second"),
     allSliders = document.querySelectorAll(".main-slider__item"),
-    firstSlideBullet = document.querySelector(".button--bullet--first"),
-    secondSlideBullet = document.querySelector(".button--bullet--second"),
+    firstSlideBulvar = document.querySelector(".button--bullet--first"),
+    secondSlideBulvar = document.querySelector(".button--bullet--second"),
     allSlideBullets = document.querySelectorAll(".button--bullet"),
     nextSlide = document.querySelector(".button--slide--right"),
     prevSlide = document.querySelector(".button--slide--left");
@@ -62,7 +78,7 @@ if (firstSlide) {
 
 
 
-let deliverySlide = document.querySelector(".service__item--delivery"),
+var deliverySlide = document.querySelector(".service__item--delivery"),
     warrantySlide = document.querySelector(".service__item--warranty"),
     creditSlide = document.querySelector(".service__item--credit"),
     allServiceSliders = document.querySelectorAll(".services__item"),
@@ -93,6 +109,7 @@ function closeModal(button, popup) {
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove(showModalClass);
+    popup.classList.remove(errorModalClass);
   });
 
   window.addEventListener("keydown", function (evt) {
