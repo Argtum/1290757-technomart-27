@@ -19,19 +19,16 @@ if (wrightUsPopup) {
 
   showModal(wrightUsOpenButton, wrightUsPopup, wrightUsFormLoginField);
   closeModal(wrightUsCloseButton, wrightUsPopup);
+
+  wrightUsForm.addEventListener("submit", function (evt) {
+    if (!wrightUsFormLoginField.value || !wrightUsFormEmailField.value || !wrightUsFormMessageField.value) {
+      evt.preventDefault();
+      wrightUsPopup.classList.remove(errorModalClass);
+      wrightUsPopup.offsetWidth = wrightUsPopup.offsetWidth;
+      wrightUsPopup.classList.add(errorModalClass);
+    }
+  });
 }
-
-
-
-wrightUsForm.addEventListener("submit", function (evt) {
-  if (!wrightUsFormLoginField.value || !wrightUsFormEmailField.value || !wrightUsFormMessageField.value) {
-    evt.preventDefault();
-    wrightUsPopup.classList.remove(errorModalClass);
-    wrightUsPopup.offsetWidth = wrightUsPopup.offsetWidth;
-    wrightUsPopup.classList.add(errorModalClass);
-  }
-});
-
 
 
 

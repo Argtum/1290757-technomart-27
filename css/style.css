@@ -268,6 +268,7 @@ img {
   background-color: #ee3643;
   text-transform: uppercase;
   border-radius: 2px;
+  line-height: 1.3em;
 
   cursor: pointer;
 }
@@ -285,8 +286,8 @@ img {
 
 .button--phone svg {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 10px;
+  left: 10px;
 }
 
 .button--main:hover,
@@ -315,6 +316,7 @@ img {
 .button--advantage {
   background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
+  border-radius: 3px;
 
   padding: 11px;
   width: 135px;
@@ -330,21 +332,18 @@ img {
   background-color: #212a3a;
   border-radius: 50%;
 
-  display: block;
+  display: flex;
   width: 40px;
   height: 40px;
 
-  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .button--social:hover,
 .button--social:focus,
 .button--social:active {
   background-color: #ee3643;
-}
-
-.button--social svg {
-  position: absolute;
 }
 
 .button--social--vk svg {
@@ -378,13 +377,13 @@ img {
 
 .button--login {
   margin-right: 10px;
-  padding: 11px 25px 10px 48px;
+  padding: 9px 25px 10px 48px;
 
   position: relative;
 }
 
 .button--registration {
-  padding: 11px 25px 10px;
+  padding: 9px 25px 10px;
 }
 
 .button--login svg {
@@ -476,7 +475,7 @@ img {
   border: solid 1px #e5e5e5;
   padding: 11px 10px 9px;
   width: 140px;
-  margin-top: 78px;
+  margin-top: 79px;
 }
 
 .button--filter:hover,
@@ -502,7 +501,7 @@ img {
 .button--item--filled {
   background-color: #63a63e;
 
-  padding: 13px 10px 9px 16px;
+  padding: 13px 10px 9px 40px;
   box-shadow: inset 0 -3px 0 0 #367315;
 
   position: relative;
@@ -684,7 +683,7 @@ img {
 .main-section-header__button {
   text-align: center;
 
-  padding: 11px;
+  padding: 10px;
   width: 252px;
 }
 
@@ -784,7 +783,7 @@ img {
 }
 
 .catalog-item__price--no-discount {
-  margin-top: 36px;
+  margin-top: 38px;
 }
 
 .catalog-item__price del {
@@ -793,7 +792,7 @@ img {
 
   display: inline-block;
   margin-top: 10px;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
 }
 
 .catalog-item__price span {
@@ -892,8 +891,8 @@ img {
 
 .service-card::before {
   position: absolute;
-  right: -345px;
-  top: 25px;
+  right: -343px;
+  top: 28px;
 }
 
 .service__item--delivery .service-card::before {
@@ -1247,8 +1246,12 @@ img {
   opacity: 0.3;
 }
 
-.social {
+.social__list {
   width: 130px;
+
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 
   display: flex;
   flex-wrap: wrap;
@@ -1286,7 +1289,7 @@ img {
 
   display: block;
   width: 240px;
-  padding: 18px 22px;
+  padding: 16px 22px 20px;
 
   border-bottom: 1px solid #293449;
   border-top: 1px solid #405069;
@@ -1368,7 +1371,7 @@ img {
 .main-header__container--bottom .container {
   flex-direction: column;
   padding-top: 45px;
-  padding-bottom: 65px;
+  padding-bottom: 67px;
 }
 
 .main-header__container--bottom {
@@ -1402,7 +1405,7 @@ img {
 
 .main-header__search-form input {
   width: 224px;
-  padding: 16px 15px 11px 4px;
+  padding: 14px 15px 11px 2px;
 }
 
 .main-header__user-navigation {
@@ -1420,16 +1423,16 @@ img {
 }
 
 .main-header__block--bookmarks {
-  padding-left: 45px;
+  padding-left: 43px;
 }
 
 .main-header__block--checkout {
-  padding-left: 22px;
+  padding-left: 20px;
 }
 
 .main-header__block svg {
   position: absolute;
-  left: 18px;
+  left: 16px;
   top: 17px;
 
   opacity: 0.3;
@@ -1490,14 +1493,13 @@ img {
   color: #ee3643;
 
   width: 255px;
-  padding-top: 5px;
+  padding-top: 2px;
   padding-left: 52px;
 }
 
 .main-header__contacts {
   font-size: 14px;
   color: #32425c;
-  text-align: center;
 }
 
 .main-header__contacts a {
@@ -1511,7 +1513,8 @@ img {
 
 .main-header__contacts span {
   display: block;
-  margin-top: 7px;
+  margin-top: 8px;
+  padding-left: 7px;
 }
 
 .main-header__phone {
@@ -1520,7 +1523,7 @@ img {
   display: block;
 
   width: 270px;
-  padding: 9px 15px 9px 70px;
+  padding: 6px 15px 6px 68px;
   border: 3px solid #ffffff;
 }
 
@@ -1548,8 +1551,8 @@ img {
   list-style: none;
 
   display: flex;
-  padding-left: 15px;
-  margin-top: 10px;
+  padding-left: 20px;
+  margin-top: 5px;
   margin-bottom: 0;
 }
 
@@ -1609,7 +1612,7 @@ img {
   color: #ffffff;
 
   margin-top: 60px;
-  margin-bottom: 26px;
+  margin-bottom: 34px;
 }
 
 .advantages__list {
@@ -1625,7 +1628,7 @@ img {
   width: 300px;
   margin-right: 20px;
   margin-bottom: 20px;
-  padding: 22px;
+  padding: 22px 20px 20px 22px;
 
   display: flex;
   flex-direction: column;
@@ -1649,7 +1652,7 @@ img {
 
   position: absolute;
   right: -130px;
-  top: 5px;
+  top: 7px;
   width: 100%;
 }
 
@@ -1690,11 +1693,16 @@ img {
 
   position: absolute;
   right: 25px;
-  top: 25px;
+  top: 23px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.advantages__text {
+  padding-right: 85px;
+  display: inline-block;
 }
 
 .main-slider {
@@ -1721,8 +1729,6 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-
-  background-color: rgba(255,255,255, 0.3);
 }
 
 .main-slider__item--current {
@@ -1746,7 +1752,7 @@ img {
 .main-slider__text--tagline {
   font-size: 18px;
 
-  top: 65px;
+  top: 62px;
   left: 25px;
 }
 
@@ -1849,7 +1855,7 @@ img {
 
 .about-company {
   width: 580px;
-  padding-top: 80px;
+  padding-top: 75px;
   padding-bottom: 85px;
 }
 
@@ -1896,7 +1902,7 @@ img {
 
 .contacts {
   width: 300px;
-  padding-top: 80px;
+  padding-top: 76px;
   padding-bottom: 85px;
 }
 
@@ -2073,7 +2079,7 @@ img {
 }
 
 .pagination__item:not(:last-child) a {
-  margin-right: 10px;
+  margin-right: 9px;
 }
 
 .pagination__item:last-child a {
@@ -2230,9 +2236,8 @@ img {
 }
 
 .main-footer__social {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+  padding-top: 16px;
+  padding-left: 35px;
 }
 
 .main-footer__feedback {
