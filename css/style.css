@@ -70,6 +70,9 @@ img {
 .container-wrapper {
   display: flex;
   justify-content: space-between;
+
+  padding-top: 77px;
+  padding-bottom: 85px;
 }
 
 .catalog-page {
@@ -267,7 +270,7 @@ img {
   color: #ffffff;
   background-color: #ee3643;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 3px;
   line-height: 1.3em;
 
   cursor: pointer;
@@ -310,7 +313,7 @@ img {
 }
 
 .button--slide--right {
-  right: 20px;
+  right: 14px;
 }
 
 .button--advantage {
@@ -318,10 +321,11 @@ img {
   text-align: center;
   border-radius: 3px;
 
-  padding: 11px;
+  padding: 11px 10px 9px;
   width: 135px;
   margin-top: 14px;
-  margin-left: 2px;
+  margin-left: 3px;
+  font-weight: 400;
 }
 
 .button--search {
@@ -377,18 +381,18 @@ img {
 
 .button--login {
   margin-right: 10px;
-  padding: 9px 25px 10px 48px;
+  padding: 10px 26px 8px 47px;
 
   position: relative;
 }
 
 .button--registration {
-  padding: 9px 25px 10px;
+  padding: 10px 24px 8px;
 }
 
 .button--login svg {
   position: absolute;
-  left: 15px;
+  left: 14px;
   top: 15px;
 }
 
@@ -620,7 +624,7 @@ img {
 
 .navigation--header a {
   display: block;
-  padding: 20px 30px;
+  padding: 19px 30px 22px;
 }
 
 .navigation--header .navigation__item:hover,
@@ -667,7 +671,7 @@ img {
 .main-section-header {
   background-color: #f9f5f0;
 
-  padding: 25px 25px 25px 28px;
+  padding: 26px 25px 25px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -694,7 +698,7 @@ img {
 
   width: 220px;
   border: solid 1px #e5e5e5;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
   margin-top: 20px;
 
   display: flex;
@@ -713,13 +717,14 @@ img {
 .catalog-item--new::before {
   content: "new";
 
-  background-color: #ee3643;
+  background-color: #ff5357;
   transform: rotate(45deg);
 
   font-size: 14px;
   line-height: 27px;
   text-align: center;
   color: #ffffff;
+  font-weight: 400;
 
   position: absolute;
   right: -90px;
@@ -740,7 +745,7 @@ img {
 
   display: block;
   padding: 0 30px;
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 .catalog-item__title h3 {
@@ -784,7 +789,7 @@ img {
 }
 
 .catalog-item__price--no-discount {
-  margin-top: 38px;
+  margin-top: 39px;
 }
 
 .catalog-item__price del {
@@ -792,7 +797,7 @@ img {
   color: #a9a9a9;
 
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 11px;
   margin-bottom: 9px;
 }
 
@@ -802,16 +807,16 @@ img {
   background-color: #ee3643;
 
   display: inline-block;
-  width: 140px;
-  height: 40px;
-  padding: 10px 10px 11px;
+  width: 136px;
+  height: 38px;
+  padding: 10px;
   border-radius: 3px;
   position: relative;
 }
 
 .catalog-item__price span::after {
   content: "";
-  border: 20px solid #ffffff;
+  border: 19px solid #ffffff;
   border-left-color: #ee3643;
   display: block;
   position: absolute;
@@ -871,7 +876,7 @@ img {
   color: #000000;
 
   margin-bottom: 0;
-  margin-top: 25px;
+  margin-top: 24px;
 }
 
 .section__text--about-company {
@@ -1265,6 +1270,7 @@ img {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+  margin-left: 4px;
 
   opacity: 0.3;
 }
@@ -1285,7 +1291,7 @@ img {
 .selector-list {
   list-style: none;
 
-  margin: 6px 0 0;
+  margin: 5px 0 0;
   padding-left: 0;
 
   display: flex;
@@ -1394,7 +1400,7 @@ img {
 .main-header__container--bottom .container {
   flex-direction: column;
   padding-top: 45px;
-  padding-bottom: 67px;
+  padding-bottom: 65px;
 }
 
 .main-header__container--bottom {
@@ -1404,7 +1410,7 @@ img {
 .main-header__logo {
   display: block;
   width: 220px;
-  padding: 18px 55px 8px;
+  padding: 13px 55px 8px;
   border-bottom: 5px solid rgba(0, 0, 0, 0.24);
   margin-bottom: -5px;
 }
@@ -1428,7 +1434,7 @@ img {
 
 .main-header__search-form input {
   width: 224px;
-  padding: 14px 15px 11px 2px;
+  padding: 9px 15px 11px 2px;
 }
 
 .main-header__user-navigation {
@@ -1438,15 +1444,14 @@ img {
 .main-header__block {
   display: block;
   width: 150px;
-  padding: 16px 15px 10px 50px;
+  padding: 11px 15px 10px 50px;
   position: relative;
 
   color: white;
-  word-wrap: break-word;
 }
 
 .main-header__block--bookmarks {
-  padding-left: 43px;
+  padding-left: 44px;
 }
 
 .main-header__block--checkout {
@@ -1455,8 +1460,8 @@ img {
 
 .main-header__block svg {
   position: absolute;
-  left: 16px;
-  top: 17px;
+  left: 17px;
+  top: 12px;
 
   opacity: 0.3;
 }
@@ -1506,7 +1511,7 @@ img {
 }
 
 .main-header__content p {
-  margin: 0;
+  margin: 0 68px 0 0;
 }
 
 .main-header__text {
@@ -1515,8 +1520,8 @@ img {
   line-height: 1.44;
   color: #ee3643;
 
-  width: 255px;
-  padding-top: 2px;
+  width: 257px;
+  padding-top: 4px;
   padding-left: 52px;
 }
 
@@ -1529,6 +1534,7 @@ img {
   font-size: 21px;
   color: #ee3643;
   text-align: left;
+  border-radius: 3px;
 
   margin-bottom: 5px;
   display: block;
@@ -1536,8 +1542,8 @@ img {
 
 .main-header__contacts span {
   display: block;
-  margin-top: 8px;
-  padding-left: 7px;
+  margin-top: 9px;
+  padding-left: 9px;
 }
 
 .main-header__phone {
@@ -1546,7 +1552,7 @@ img {
   display: block;
 
   width: 270px;
-  padding: 6px 15px 6px 68px;
+  padding: 7px 14px 5px 70px;
   border: 3px solid #ffffff;
 }
 
@@ -1636,8 +1642,8 @@ img {
   font-weight: bold;
   color: #ffffff;
 
-  margin-top: 60px;
-  margin-bottom: 34px;
+  margin-top: 59px;
+  margin-bottom: 33px;
 }
 
 .advantages__list {
@@ -1653,7 +1659,7 @@ img {
   width: 300px;
   margin-right: 20px;
   margin-bottom: 20px;
-  padding: 22px 20px 20px 22px;
+  padding: 22px;
 
   display: flex;
   flex-direction: column;
@@ -1668,12 +1674,13 @@ img {
 .advantages__item--motivator::before {
   content: "new";
 
-  background-color: #ee3643;
+  background-color: #ff5357;
   transform: rotate(45deg);
 
   font-size: 14px;
   line-height: 27px;
   text-align: center;
+  font-weight: 400;
 
   position: absolute;
   right: -130px;
@@ -1712,6 +1719,18 @@ img {
   background-color: #ffc047;
 }
 
+.advantages__item--delivery,
+.advantages__item--discounts,
+.advantages__item--equipment {
+  padding-left: 23px;
+}
+
+.advantages__item--delivery .advantages__button,
+.advantages__item--discounts .advantages__button,
+.advantages__item--equipment .advantages__button {
+  margin-left: 0;
+}
+
 .advantages__image {
   width: 80px;
   height: 80px;
@@ -1723,6 +1742,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.advantages__item--delivery .advantages__image,
+.advantages__item--equipment .advantages__image {
+  right: 30px;
+}
+
+.advantages__item--discounts .advantages__image {
+  right: 34px;
 }
 
 .advantages__text {
@@ -1776,6 +1804,7 @@ img {
 
 .main-slider__text--tagline {
   font-size: 18px;
+  font-weight: 400;
 
   top: 62px;
   left: 25px;
@@ -1783,13 +1812,14 @@ img {
 
 .main-slider__button {
   text-align: center;
+  font-weight: 400;
 
   display: block;
   width: 195px;
-  padding: 12px;
+  padding: 11px 10px 9px 15px;
 
   position: absolute;
-  bottom: 25px;
+  bottom: 28px;
   left: 25px;
 }
 
@@ -1797,6 +1827,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  margin-top: 4px;
 
   background-color: transparent;
   z-index: 1;
@@ -1810,7 +1841,7 @@ img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 40px;
+  bottom: 36px;
   width: 30px;
 
   display: flex;
@@ -1880,8 +1911,8 @@ img {
 
 .about-company {
   width: 580px;
-  padding-top: 75px;
-  padding-bottom: 85px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .about-company__item a {
@@ -1899,7 +1930,7 @@ img {
   width: 25px;
   height: 2px;
   position: absolute;
-  left: -35px;
+  left: -36px;
   top: 10px;
 }
 
@@ -1907,8 +1938,8 @@ img {
   list-style: none;
 
   margin-bottom: 0;
-  margin-top: 20px;
-  padding-left: 35px;
+  margin-top: 22px;
+  padding-left: 36px;
 }
 
 .about-company__list li {
@@ -1920,29 +1951,30 @@ img {
 }
 .about-company__button {
   width: 220px;
-  margin-top: 35px;
+  margin-top: 37px;
   display: block;
-  padding: 11px 40px;
+  padding: 11px 0 9px;
+  text-align: center;
 }
 
 .contacts {
   width: 300px;
-  padding-top: 76px;
-  padding-bottom: 85px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .contacts__map {
-  margin-top: 30px;
+  margin-top: 32px;
   display: block;
 }
 
 .contacts__button {
   text-align: center;
 
-  margin-top: 35px;
+  margin-top: 36px;
   display: block;
   padding-top: 11px;
-  padding-bottom: 11px;
+  padding-bottom: 9px;
 }
 
 .page-title {
@@ -2161,7 +2193,7 @@ img {
 }
 
 .popular-goods {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 .popular-producers {
@@ -2251,7 +2283,7 @@ img {
   line-height: 1.33;
   color: #f3f7f9;
 
-  width: 322px;
+  width: 325px;
   margin-top: 34px;
   padding-left: 3px;
 }
