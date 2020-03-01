@@ -23,9 +23,9 @@ var wrightUsOpenButton = document.querySelector(".contacts__button"),
 if (wrightUsPopup) {
   var wrightUsCloseButton = wrightUsPopup.querySelector(".modal__close"),
       wrightUsForm = wrightUsPopup.querySelector("form"),
-      wrightUsFormLoginField = wrightUsPopup.querySelector("[name=login]"),
-      wrightUsFormEmailField = wrightUsPopup.querySelector("[name=email]"),
-      wrightUsFormMessageField = wrightUsPopup.querySelector("[name=message]");
+      wrightUsFormLoginField = wrightUsPopup.querySelector("#write-us-login"),
+      wrightUsFormEmailField = wrightUsPopup.querySelector("#write-us-email"),
+      wrightUsFormMessageField = wrightUsPopup.querySelector("#write-us-message");
 
   showModal(wrightUsOpenButton, wrightUsPopup);
   closeModal(wrightUsCloseButton, wrightUsPopup);

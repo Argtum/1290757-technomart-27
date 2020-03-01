@@ -59,12 +59,14 @@ img {
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  max-width: 940px;
+  width: 100%;
 }
 
 .container__modal {
   margin: 0 auto;
-  width: 460px;
+  max-width: 460px;
+  width: 100%;
 }
 
 .container-wrapper {
