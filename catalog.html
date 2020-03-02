@@ -48,7 +48,7 @@
             <p class="main-header__text">
               Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта
             </p>
-            <p class="main-header__contacts">
+            <p class="main-header__contacts main-header__contacts--inner">
               <a class="main-header__phone button button--phone" href="tel:+78125550555">
                 +7 (812) 555-05-55
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
@@ -137,12 +137,12 @@
                   <div class="form__field form__field--range-output">
                     <label>
                       <span class="visually-hidden">Цена от</span>
-                      <input type="number" name="min-price" value="0" disabled>
+                      <input type="text" name="min-price" value="0">
                     </label>
                     <div>&#8211;</div>
                     <label>
                       <span class="visually-hidden">Цена до</span>
-                      <input type="number" name="max-price" value="30000" disabled>
+                      <input type="text" name="max-price" value="30000">
                     </label>
                   </div>
                 </fieldset>
@@ -151,23 +151,23 @@
                   <legend class="form__text">Производители:</legend>
                   <ul class="form__fields-list">
                     <li class="form__field">
-                      <input id="filter-bosch" type="checkbox" name="bosch" checked>
+                      <input class="visually-hidden" id="filter-bosch" type="checkbox" name="bosch" checked>
                       <label for="filter-bosch">Bosch</label>
                     </li>
                     <li class="form__field">
-                      <input id="filter-interskol" type="checkbox" name="interskol">
+                      <input class="visually-hidden" id="filter-interskol" type="checkbox" name="interskol">
                       <label for="filter-interskol">Интерскол</label>
                     </li>
                     <li class="form__field">
-                      <input id="filter-makita" type="checkbox" name="makita" checked>
+                      <input class="visually-hidden" id="filter-makita" type="checkbox" name="makita" checked>
                       <label for="filter-makita">Makita</label>
                     </li>
                     <li class="form__field">
-                      <input id="filter-dewalt" type="checkbox" name="dewalt">
+                      <input class="visually-hidden" id="filter-dewalt" type="checkbox" name="dewalt">
                       <label for="filter-dewalt">Dewalt</label>
                     </li>
                     <li class="form__field">
-                      <input id="filter-hitachi" type="checkbox" name="hitachi">
+                      <input class="visually-hidden" id="filter-hitachi" type="checkbox" name="hitachi">
                       <label for="filter-hitachi">Hitachi</label>
                     </li>
                   </ul>
@@ -177,11 +177,12 @@
                   <legend class="form__text">Питание:</legend>
                   <ul class="form__fields-list">
                     <li class="form__field">
-                      <input id="filter-rechargeable" type="radio" name="network" value="rechargeable" checked>
+                      <input class="visually-hidden" id="filter-rechargeable" type="radio" name="network"
+                             value="rechargeable" checked>
                       <label for="filter-rechargeable">Аккумуляторные</label>
                     </li>
                     <li class="form__field">
-                      <input id="filter-network" type="radio" name="network" value="network">
+                      <input class="visually-hidden" id="filter-network" type="radio" name="network" value="network">
                       <label for="filter-network">Сетевые</label>
                     </li>
                   </ul>

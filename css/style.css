@@ -46,6 +46,7 @@ html {
 
 body {
   font-family: 'Cuprum', Arial, sans-serif;
+  min-width: 990px;
 }
 
 a {
@@ -59,14 +60,24 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 940px;
-  width: 100%;
+  width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .container__modal {
   margin: 0 auto;
-  max-width: 460px;
-  width: 100%;
+  width: 460px;
+}
+
+.container__modal input:hover,
+.container__modal textarea:hover {
+  border: solid 2px #b5b5b5;
+}
+
+.container__modal input:focus,
+.container__modal textarea:focus {
+  border: solid 2px #ee3643;
 }
 
 .container-wrapper {
@@ -251,7 +262,7 @@ img {
   border: none;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -683,6 +694,7 @@ img {
   font-size: 30px;
   color: #32425c;
   text-transform: uppercase;
+  font-weight: 400;
 
   margin: 0;
 }
@@ -997,18 +1009,6 @@ img {
   flex-direction: column;
 }
 
-.form__field input[type=text]:hover,
-.form__field input[type=email]:hover,
-.form__field textarea:hover {
-  border: solid 2px #b5b5b5;
-}
-
-.form__field input[type=text]:focus,
-.form__field input[type=email]:focus,
-.form__field textarea:focus {
-  border: solid 2px #ee3643;
-}
-
 .form__fieldset--write-us label {
   font-size: 18px;
 }
@@ -1068,7 +1068,7 @@ img {
   width: 95px;
   padding-top: 8px;
   padding-bottom: 10px;
-  padding-left: 18px;
+  padding-left: 5px;
 }
 
 .form__fields-list {
@@ -1080,11 +1080,6 @@ img {
 .form__fields-list label {
   font-size: 18px;
   color: #000000;
-}
-
-.form__field input[type="checkbox"],
-.form__field input[type="radio"] {
-  display: none;
 }
 
 .form__field input[type="checkbox"] ~ label,
@@ -1171,6 +1166,7 @@ img {
 .form__field input[type="radio"]:hover ~ label::before,
 .form__field input[type="radio"]:focus ~ label::before {
   border-color: #b5b5b5;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .form__field input[type="checkbox"]:hover ~ label::after,
@@ -1536,6 +1532,10 @@ img {
 .main-header__contacts {
   font-size: 14px;
   color: #32425c;
+}
+
+.main-header__contacts--inner {
+  padding-left: 14px;
 }
 
 .main-header__contacts a {
@@ -2262,7 +2262,7 @@ img {
   background-color: #293449;
 
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
 }
 
 .main-footer__container--top .container,
