@@ -350,8 +350,8 @@ img {
   border-radius: 50%;
 
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 41px;
+  height: 41px;
 
   justify-content: center;
   align-items: center;
@@ -361,21 +361,6 @@ img {
 .button--social:focus,
 .button--social:active {
   background-color: #ee3643;
-}
-
-.button--social--vk svg {
-  left: 6px;
-  top: 13px;
-}
-
-.button--social--facebook svg {
-  left: 13px;
-  top: 9px;
-}
-
-.button--social--inst svg {
-  left: 8px;
-  top: 9px;
 }
 
 .button--advantage:hover,
@@ -413,6 +398,7 @@ img {
   font-size: 21px;
   text-transform: capitalize;
 
+  width: 255px;
   padding: 10px 24px 9px 45px;
   position: relative;
 }
@@ -811,6 +797,7 @@ img {
   color: #a9a9a9;
 
   display: inline-block;
+  vertical-align: middle;
   margin-top: 11px;
   margin-bottom: 9px;
 }
@@ -821,6 +808,7 @@ img {
   background-color: #ee3643;
 
   display: inline-block;
+  vertical-align: middle;
   width: 136px;
   height: 38px;
   padding: 10px;
@@ -1080,6 +1068,9 @@ img {
 .form__fields-list label {
   font-size: 18px;
   color: #000000;
+
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .form__field input[type="checkbox"] ~ label,
@@ -1090,7 +1081,6 @@ img {
   font-size: 15px;
   color: #000000;
   text-transform: uppercase;
-  vertical-align: middle;
 
   padding-left: 35px;
 }
@@ -1280,16 +1270,22 @@ img {
 }
 
 .social__list {
-  width: 130px;
-
   list-style: none;
   padding-left: 0;
-  margin: 0;
+  margin: 0 10px;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.social__item {
+  margin-top: 4px;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 4px;
 }
 
 .selector-list {
@@ -1532,6 +1528,7 @@ img {
 .main-header__contacts {
   font-size: 14px;
   color: #32425c;
+  width: 285px;
 }
 
 .main-header__contacts--inner {
@@ -1764,6 +1761,7 @@ img {
 .advantages__text {
   padding-right: 85px;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .main-slider {
@@ -2297,6 +2295,10 @@ img {
   width: 325px;
   margin-top: 34px;
   padding-left: 3px;
+}
+
+.main-footer__contacts a {
+  color: #ffffff;
 }
 
 .main-footer__copyright {
